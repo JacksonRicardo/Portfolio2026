@@ -1,49 +1,84 @@
-# 👨‍💻 Portfólio Pessoal | Jackson Ricardo
+# 👨‍💻 Portfólio Profissional | Jackson Ricardo
 
-## Este é o repositório do meu portfólio pessoal e profissional. O objetivo deste site é apresentar minha trajetória, experiências, habilidades e projetos nas áreas de Suporte Técnico, Infraestrutura de Redes e Desenvolvimento Web. O layout foi desenhado para transmitir uma identidade visual moderna, corporativa e premium, utilizando um tema escuro (Dark Mode) de alto contraste.
+![Prévia do Portfólio](fotos/og-preview.jpg)
 
-# 🚀 Funcionalidades
+Este é o repositório do meu portfólio pessoal e profissional ([jacksonricardo.com.br](https://jacksonricardo.com.br)). O objetivo deste site é apresentar minha trajetória, experiências profissionais, formação acadêmica, habilidades técnicas e projetos nas áreas de **Análise de Sistemas, ERP (SUAP/TOTVS), SQL, Desenvolvimento Full Stack (Python, Django, JavaScript, React, PostgreSQL), Integrações e Infraestrutura de TI**.
 
-- Design Premium e Dark Mode: Interface limpa focada na usabilidade e leitura agradável.
-- 100% Responsivo: O layout se adapta perfeitamente a smartphones, tablets e monitores widescreen.
-- Single-Page Application (SPA) Feel: Navegação fluida e âncoras de rolagem suave (Smooth Scroll) pelo menu de navegação.
-- Timeline de Experiências: Exibição cronológica e vertical da trajetória profissional, adaptável para telas menores.
-- Organização em Cards: Áreas de conhecimento, habilidades e recomendações estruturadas para leitura rápida.
+---
 
-# 🛠️ Tecnologias Utilizadas
+## 🌐 Demonstração Online
 
-## O projeto foi construído focando em performance, sem depender de frameworks JavaScript complexos, mantendo tudo centralizado e otimizado.
+- **Site Oficial:** [https://jacksonricardo.com.br](https://jacksonricardo.com.br)
+- **Repositório:** [https://github.com/JacksonRicardo/Portfolio2026](https://github.com/JacksonRicardo/Portfolio2026)
 
-- HTML5 - Estrutura semântica.
-- CSS3 - Estilização personalizada, animações e responsividade (variáveis globais CSS).
-- Bootstrap 5 (via CDN) - Grid system flexível e componentes de interface.
-- FontAwesome (via CDN) - Biblioteca de ícones vetoriais.
-- Google Fonts - Tipografia (Inter e Poppins).
+---
 
-# ⚙️ Como executar o projeto
+## 🚀 Funcionalidades
 
-## Como o projeto consiste puramente em frontend (HTML, CSS e JS nativo), não há necessidade de builds complexas ou instalação de dependências.
+- **Tema Escuro e Claro (Dark & Light Mode):** Alternância suave entre o tema escuro padrão e o tema claro, com salvamento automático da preferência do visitante no `localStorage`.
+- **Tradução Bilíngue (PT-BR / EN):** Botão de troca instantânea de idioma entre Português e Inglês em todas as seções do portfólio, também persistido no `localStorage`.
+- **Download Direto de Currículo:** Botão integrado na seção principal para baixar o currículo atualizado em PDF (`Curriculo_Jackson_Ricardo.pdf`).
+- **Prévia Rica para Redes Sociais (Open Graph & Twitter Cards):** Meta tags configuradas com imagem de capa dedicada (`fotos/og-preview.jpg` em `1200x630`) para exibição no LinkedIn, WhatsApp e outras redes.
+- **100% Responsivo:** Layout adaptável para smartphones, tablets e desktops.
+- **Timeline de Experiências:** Exibição cronológica e vertical da trajetória profissional no SENAC, Grupo Salta Educação, Service Rapide, FUNCERN (projetos UFR e IFMT), IMD, IFRN, MPRN e Secretaria Municipal de Saúde de Natal.
+- **Organização em Cards:** Formação acadêmica, pós-graduações, habilidades, áreas de conhecimento, projetos em destaque e recomendações profissionais estruturados para leitura rápida.
 
-1. Clone este repositório:
-- git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+---
 
-2. Execute localmente:
-- Basta abrir o arquivo index.html no seu navegador de preferência.
+## 🛠️ Tecnologias Utilizadas
 
-3. Hospedagem em Servidor Próprio:
-- Copie os arquivos para o diretório público do seu servidor web (ex: /var/www/html/ no Apache/Nginx) e acesse através do seu domínio.
+O projeto foi construído focando em alta performance, acessibilidade e facilidade de manutenção:
 
-# 🗂️ Estrutura do Código
+- **HTML5** — Estrutura semântica e metadados SEO / Open Graph.
+- **CSS3** — Estilização personalizada com variáveis CSS (`Custom Properties`) para suporte nativo a múltiplos temas, animações e responsividade.
+- **JavaScript (Vanilla ES6+)** — Gerenciamento de estado de tema (Claro/Escuro), dicionário de internacionalização (PT/EN) e efeitos de navegação.
+- **Bootstrap 5 (via CDN)** — Sistema de grid responsivo e componentes utilitários.
+- **FontAwesome 6 (via CDN)** — Ícones vetoriais.
+- **Google Fonts** — Tipografia moderna (*Inter* e *Poppins*).
 
-- Todo o projeto foi consolidado em um único arquivo index.html para facilitar a implantação e manutenção, contendo:
-- Metadados e importação de CDNs (<head>).
-- Bloco customizado de estilos (<style>).
-- Corpo e estrutura da página (<body>).
-- Scripts nativos para comportamento de navegação no final do documento.
+---
 
-# 📞 Contato
-- Fique à vontade para entrar em contato comigo:
-- Email: jackson2016.ricardo@gmail.com
-- WhatsApp: (84) 98866-7338
-- Localização: Natal - RN, Brasil
-Desenvolvido com dedicação por Jackson Ricardo.
+## ⚙️ Como Executar o Projeto
+
+Como o projeto utiliza HTML, CSS e JavaScript nativos, não há necessidade de etapas de build ou instalação de dependências:
+
+1. **Clone este repositório:**
+   ```bash
+   git clone https://github.com/JacksonRicardo/Portfolio2026.git
+   ```
+
+2. **Execute localmente:**
+   - Acesse a pasta `Portfolio2026` e abra o arquivo `index.html` diretamente no navegador de sua preferência.
+
+3. **Hospedagem:**
+   - Basta publicar os arquivos na raiz do seu servidor web (Apache, Nginx, GitHub Pages, Vercel ou Netlify).
+
+---
+
+## 🗂️ Estrutura de Arquivos
+
+```text
+Portfolio2026/
+├── fotos/
+│   ├── perfil.jpg                     # Foto de perfil principal (Hero)
+│   └── og-preview.jpg                 # Imagem de prévia Open Graph (1200x630) para LinkedIn/WhatsApp
+├── Curriculo_Jackson_Ricardo.pdf      # Currículo em PDF disponível para download
+├── index.html                         # Aplicação principal (HTML, CSS e JS de temas/tradução)
+└── README.md                          # Documentação do projeto
+```
+
+---
+
+## 📞 Contato
+
+Fique à vontade para entrar em contato comigo:
+
+- **LinkedIn:** [linkedin.com/in/jackson-r100](https://www.linkedin.com/in/jackson-r100/)
+- **GitHub:** [github.com/JacksonRicardo](https://github.com/JacksonRicardo/)
+- **Email:** [jackson2016.ricardo@gmail.com](mailto:jackson2016.ricardo@gmail.com)
+- **WhatsApp / Telefone:** (84) 98866-7338
+- **Localização:** Natal - RN, Brasil
+
+---
+
+Desenvolvido com dedicação por **Jackson Ricardo**.
