@@ -20,7 +20,7 @@ Este é o repositório do meu portfólio pessoal e profissional ([jacksonricardo
 - **Download Direto de Currículo:** Botão integrado na seção principal para baixar o currículo atualizado em PDF (`Curriculo_Jackson_Ricardo.pdf`).
 - **Prévia Rica para Redes Sociais (Open Graph & Twitter Cards):** Meta tags configuradas com imagem de capa dedicada (`fotos/og-preview.jpg` em `1200x630`) para exibição no LinkedIn, WhatsApp e outras redes.
 - **100% Responsivo:** Layout adaptável para smartphones, tablets e desktops.
-- **Timeline de Experiências:** Exibição cronológica e vertical da trajetória profissional no SENAC, Grupo Salta Educação, Service Rapide, FUNCERN (projetos UFR e IFMT), IMD, IFRN, MPRN e Secretaria Municipal de Saúde de Natal.
+- **Timeline de Experiências:** Exibição cronológica e vertical da trajetória profissional no SENAC, Procuradoria-Geral da Fazenda Nacional (PGFN/CE), Grupo Salta Educação, Service Rapide, FUNCERN (projetos UFR e IFMT), IMD, IFRN, MPRN e Secretaria Municipal de Saúde de Natal.
 - **Organização em Cards:** Formação acadêmica, pós-graduações, habilidades, áreas de conhecimento, projetos em destaque e recomendações profissionais estruturados para leitura rápida.
 
 ---
