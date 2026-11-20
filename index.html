@@ -1,1162 +1,663 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-palette="emerald">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Ricardo | Portfólio</title>
-    <meta name="description" content="Portfólio de Jackson Ricardo — Analista de Sistemas | ERP (SUAP/TOTVS), SQL, Python, Django, JavaScript, React e Integrações.">
+    <title>Jackson Ricardo | Analista de Sistemas e Dados</title>
+    <meta name="description" content="Portfólio de Jackson Ricardo — Analista de Sistemas e Dados em Natal/RN. Experiência prática com ERP (SUAP/TOTVS), SQL, Power BI, Python, Django e infraestrutura.">
     <meta name="author" content="Jackson Ricardo dos Santos da Silva">
 
-    <!-- Open Graph / LinkedIn / WhatsApp / Facebook -->
+    <!-- Favicon e Ícone do Site -->
+    <link rel="icon" type="image/svg+xml" href="fotos/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="fotos/favicon.png">
+    <link rel="apple-touch-icon" href="fotos/favicon.png">
+
+    <!-- Open Graph / LinkedIn / WhatsApp / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jacksonricardo.com.br/">
     <meta property="og:site_name" content="Jackson Ricardo | Portfólio">
-    <meta property="og:title" content="Jackson Ricardo — Analista de Sistemas | ERP, SQL e Integrações">
-    <meta property="og:description" content="Analista de Sistemas graduado em ADS e pós-graduado em Ciência de Dados, com +5 anos de experiência em TI, implantação de ERP (SUAP), Python, Django, SQL e integrações.">
+    <meta property="og:title" content="Jackson Ricardo — Analista de Sistemas & Dados | ERP, SQL e Python">
+    <meta property="og:description" content="Graduado em ADS pelo IFRN e pós-graduado em Ciência de Dados. +5 anos construindo sistemas, estruturando dados e apoiando equipes de TI.">
     <meta property="og:image" content="https://jacksonricardo.com.br/fotos/og-preview.jpg">
     <meta property="og:image:secure_url" content="https://jacksonricardo.com.br/fotos/og-preview.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Portfólio de Jackson Ricardo — Analista de Sistemas">
+    <meta property="og:image:alt" content="Portfólio de Jackson Ricardo — Analista de Sistemas e Dados">
     <meta property="og:locale" content="pt_BR">
-
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://jacksonricardo.com.br/">
-    <meta name="twitter:title" content="Jackson Ricardo — Analista de Sistemas | ERP, SQL e Integrações">
-    <meta name="twitter:description" content="Analista de Sistemas graduado em ADS e pós-graduado em Ciência de Dados, com +5 anos de experiência em TI, implantação de ERP (SUAP), Python, Django, SQL e integrações.">
+    <meta name="twitter:title" content="Jackson Ricardo — Analista de Sistemas & Dados">
+    <meta name="twitter:description" content="Graduado em ADS pelo IFRN e pós-graduado em Ciência de Dados. +5 anos em TI, ERP (SUAP), SQL, Power BI e Python.">
     <meta name="twitter:image" content="https://jacksonricardo.com.br/fotos/og-preview.jpg">
-    
-    <!-- Bootstrap 5 CSS -->
+
+    <!-- Bootstrap 5, FontAwesome 6 e Google Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* ==========================================================================
-           CONFIGURAÇÃO DE LINKS E IMAGENS (COLE SEUS LINKS AQUI)
-           ========================================================================== */
-        :root {
-            /* FOTO PRINCIPAL (HERO) */
-            --profile-img: url('fotos/perfil.jpg');
-            
-            /* FOTOS DAS RECOMENDAÇÕES */
-            --avatar-1: url('https://placehold.co/150x150/2d3748/ffffff?text=AH');
-            --avatar-2: url('https://placehold.co/150x150/2d3748/ffffff?text=FS');
-            --avatar-3: url('https://placehold.co/150x150/2d3748/ffffff?text=RM');
-            --avatar-4: url('https://placehold.co/150x150/2d3748/ffffff?text=MD');
-
-            /* FOTOS DOS PROJETOS */
-            --projeto-1: url('https://placehold.co/600x400/2d3748/0dcaf0?text=Projeto+1');
-            --projeto-2: url('https://placehold.co/600x400/2d3748/0dcaf0?text=Projeto+2');
-            --projeto-3: url('https://placehold.co/600x400/2d3748/0dcaf0?text=Projeto+3');
-
-            /* PALETA DE CORES PREMIUM ESCURA (PADRÃO) */
-            --bg-color: #0b1120;
-            --bg-alt: #0d1326;
-            --bg-footer: #070b15;
-            --bg-navbar: rgba(11, 17, 32, 0.92);
-            --bg-card: #1e293b;
-            --bg-card-hover: #334155;
-            --primary-color: #0dcaf0;
-            --primary-dark: #0891b2;
-            --text-main: #f8fafc;
-            --text-muted: #cbd5e1;
-            --border-subtle: rgba(255, 255, 255, 0.06);
-            --card-shadow: none;
-            --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.5);
-            --navbar-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            --btn-primary-text: #000000;
-            color-scheme: dark;
+        /* 1. PALETAS DE CORES TECH (WCAG AA / AAA) */
+        :root, [data-palette="emerald"] {
+            --bg-main: #0f1419; --bg-alt: #131a21; --bg-card: #161d24; --bg-navbar: rgba(15, 20, 25, 0.92);
+            --primary: #34d399; --primary-strong: #10b981; --primary-soft: rgba(52, 211, 153, 0.12);
+            --text-main: #f1f5f9; --text-muted: #94a3b8; --border-color: rgba(241, 245, 249, 0.12);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.25); --btn-text: #06281e; color-scheme: dark;
+        }
+        [data-palette="emerald"][data-theme="light"] {
+            --bg-main: #f8fafc; --bg-alt: #f1f5f9; --bg-card: #ffffff; --bg-navbar: rgba(248, 250, 252, 0.92);
+            --primary: #047857; --primary-strong: #065f46; --primary-soft: rgba(4, 120, 87, 0.1);
+            --text-main: #0f172a; --text-muted: #334155; --border-color: rgba(15, 23, 42, 0.14);
+            --shadow: 0 4px 18px rgba(15, 23, 42, 0.06); --btn-text: #ffffff; color-scheme: light;
+        }
+        [data-palette="editor"] {
+            --bg-main: #0d1117; --bg-alt: #121720; --bg-card: #161b22; --bg-navbar: rgba(13, 17, 23, 0.92);
+            --primary: #58a6ff; --primary-strong: #388bfd; --primary-soft: rgba(88, 166, 255, 0.12);
+            --text-main: #e6edf3; --text-muted: #9ea7b3; --border-color: rgba(230, 237, 243, 0.12); --btn-text: #051d38;
+        }
+        [data-palette="editor"][data-theme="light"] {
+            --bg-main: #f6f8fa; --bg-alt: #eaeef2; --bg-card: #ffffff; --bg-navbar: rgba(246, 248, 250, 0.92);
+            --primary: #0969da; --primary-strong: #0550ae; --primary-soft: rgba(9, 105, 218, 0.1);
+            --text-main: #1f2328; --text-muted: #424a53; --border-color: rgba(31, 35, 40, 0.14); --btn-text: #ffffff;
+        }
+        [data-palette="amber"] {
+            --bg-main: #141413; --bg-alt: #191917; --bg-card: #1e1e1c; --bg-navbar: rgba(20, 20, 19, 0.92);
+            --primary: #fbbf24; --primary-strong: #f59e0b; --primary-soft: rgba(251, 191, 36, 0.12);
+            --text-main: #f5f5f4; --text-muted: #a8a29e; --border-color: rgba(245, 245, 244, 0.12); --btn-text: #271701;
+        }
+        [data-palette="amber"][data-theme="light"] {
+            --bg-main: #faf9f5; --bg-alt: #f0eee6; --bg-card: #ffffff; --bg-navbar: rgba(250, 249, 245, 0.92);
+            --primary: #b45309; --primary-strong: #92400e; --primary-soft: rgba(180, 83, 9, 0.1);
+            --text-main: #1c1917; --text-muted: #44403c; --border-color: rgba(28, 25, 23, 0.14); --btn-text: #ffffff;
         }
 
-        /* PALETA DE CORES TEMA CLARO */
-        [data-theme="light"] {
-            --bg-color: #f8fafc;
-            --bg-alt: #f1f5f9;
-            --bg-footer: #e2e8f0;
-            --bg-navbar: rgba(248, 250, 252, 0.92);
-            --bg-card: #ffffff;
-            --bg-card-hover: #f1f5f9;
-            --primary-color: #0891b2;
-            --primary-dark: #0e7490;
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --border-subtle: rgba(15, 23, 42, 0.08);
-            --card-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
-            --card-shadow-hover: 0 12px 30px rgba(15, 23, 42, 0.12);
-            --navbar-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
-            --btn-primary-text: #ffffff;
-            color-scheme: light;
+        /* 2. BASE, TIPOGRAFIA E ACESSIBILIDADE */
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-main); color: var(--text-main); font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.75; font-size: 1.05rem; transition: background-color 0.25s ease, color 0.25s ease; }
+        h1, h2, h3, h4, .brand-font { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); line-height: 1.3; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.88em; }
+        .text-muted { color: var(--text-muted) !important; }
+        .skip-link { position: absolute; top: -100px; left: 16px; background: var(--primary); color: var(--btn-text); padding: 10px 18px; border-radius: 8px; font-weight: 700; z-index: 2000; text-decoration: none; transition: top 0.2s ease; }
+        .skip-link:focus { top: 12px; }
+        a:focus-visible, button:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
+        section { padding: 88px 0; }
+        .section-alt { background-color: var(--bg-alt); }
+        .section-header { max-width: 700px; margin-bottom: 44px; }
+        .section-index { display: inline-block; color: var(--primary); font-weight: 600; margin-bottom: 6px; }
+        .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
 
-        /* ==========================================================================
-           ESTILOS GERAIS
-           ========================================================================== */
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+        /* 3. NAVBAR E CONTROLES */
+        .navbar { background-color: var(--bg-navbar); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 12px 0; }
+        .navbar-brand { color: var(--text-main) !important; font-weight: 800; font-size: 1.25rem; }
+        .navbar-brand span { color: var(--primary); }
+        .nav-link { color: var(--text-muted) !important; font-weight: 500; padding: 8px 12px !important; border-radius: 8px; }
+        .nav-link:hover, .nav-link.active { color: var(--primary) !important; background-color: var(--primary-soft); }
+        .control-btn { height: 38px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--bg-card); color: var(--text-main); display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        .control-btn i { color: var(--primary); }
+        .control-btn:hover { border-color: var(--primary); background-color: var(--primary-soft); }
+        .btn-custom { padding: 12px 22px; border-radius: 10px; font-weight: 600; transition: all 0.2s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary-custom { background-color: var(--primary); color: var(--btn-text); border: 2px solid var(--primary); }
+        .btn-primary-custom:hover { background-color: var(--primary-strong); border-color: var(--primary-strong); color: var(--btn-text); transform: translateY(-2px); }
+        .btn-outline-custom { background-color: transparent; color: var(--text-main); border: 2px solid var(--border-color); }
+        .btn-outline-custom:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
 
-        h1, h2, h3, h4, h5, h6, .brand-font {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-main);
-        }
+        /* 4. HERO, CARDS E PROJETOS */
+        #home { min-height: 88vh; display: flex; align-items: center; padding-top: 110px; }
+        .hero-title { font-size: clamp(2.1rem, 4vw, 3.1rem); font-weight: 800; margin-bottom: 12px; }
+        .photo-frame { display: inline-block; background: var(--bg-card); border: 1px solid var(--border-color); padding: 12px; border-radius: 24px; box-shadow: var(--shadow); }
+        .hero-photo { width: 280px; height: 280px; object-fit: cover; object-position: center 15%; border-radius: 16px; display: block; }
+        .photo-caption { margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); }
+        .card-surface { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 26px; box-shadow: var(--shadow); height: 100%; transition: transform 0.2s ease, border-color 0.2s ease; }
+        .card-surface:hover { transform: translateY(-3px); border-color: var(--primary); }
+        .context-step { border-left: 2px solid var(--primary); padding-left: 14px; margin-bottom: 14px; }
+        .context-step strong { display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary); }
 
-        .text-muted {
-            color: var(--text-muted) !important;
-        }
-
-        section {
-            padding: 100px 0;
-            transition: background-color 0.3s ease;
-        }
-
-        .section-alt {
-            background-color: var(--bg-alt);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-color);
-        }
-
-        .navbar {
-            background-color: var(--bg-navbar);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-subtle);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-        .navbar-brand {
-            color: var(--text-main) !important;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .navbar-brand span {
-            color: var(--primary-color);
-        }
-        .nav-link {
-            color: var(--text-muted) !important;
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-color) !important;
-        }
-        .navbar-toggler {
-            border-color: var(--border-subtle);
-        }
-        .navbar-toggler:focus {
-            box-shadow: 0 0 0 0.2rem rgba(13, 202, 240, 0.25);
-        }
-
-        /* Botões de Alternar Tema e Idioma */
-        .theme-toggle-btn, .lang-toggle-btn {
-            height: 40px;
-            border-radius: 50px;
-            border: 1px solid var(--border-subtle);
-            background-color: var(--bg-card);
-            color: var(--primary-color);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: var(--card-shadow);
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-        .theme-toggle-btn {
-            width: 40px;
-            border-radius: 50%;
-        }
-        .lang-toggle-btn {
-            padding: 0 14px;
-            gap: 6px;
-        }
-        .theme-toggle-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--btn-primary-text);
-            transform: rotate(15deg) scale(1.05);
-        }
-        .lang-toggle-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--btn-primary-text);
-            transform: translateY(-2px);
-        }
-
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-        }
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .hero-title span {
-            background: linear-gradient(90deg, var(--primary-color), #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-        .hero-img-container {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background-image: var(--profile-img);
-            background-size: cover;
-            background-position: center;
-            border: 4px solid var(--bg-card);
-            box-shadow: 0 0 30px rgba(13, 202, 240, 0.2);
-            margin: 0 auto;
-            position: relative;
-        }
-        .hero-img-container::after {
-            content: '';
-            position: absolute;
-            top: -10px; right: -10px; bottom: -10px; left: -10px;
-            border-radius: 50%;
-            border: 2px dashed var(--primary-color);
-            animation: spin 20s linear infinite;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-
-        /* Custom Buttons */
-        .btn-custom {
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn-primary-custom {
-            background-color: var(--primary-color);
-            color: var(--btn-primary-text);
-            border: none;
-        }
-        .btn-primary-custom:hover {
-            background-color: var(--primary-dark);
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(13, 202, 240, 0.3);
-        }
-        .btn-outline-custom {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-        .btn-outline-custom:hover {
-            background-color: var(--primary-color);
-            color: var(--btn-primary-text);
-            transform: translateY(-3px);
-        }
-
-        .about-text {
-            color: var(--text-muted);
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-        .edu-card {
-            background-color: var(--bg-card);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s, background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .edu-card:hover { transform: translateX(10px); }
-        .edu-card i { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 10px; }
-
-        /* Timeline (Experiência) */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .timeline::after {
-            content: ''; position: absolute; width: 4px; background-color: var(--bg-card);
-            top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px;
-            box-shadow: var(--card-shadow);
-        }
-        .timeline-item {
-            padding: 10px 40px; position: relative; background-color: inherit; width: 50%; margin-bottom: 30px;
-        }
-        .timeline-item::after {
-            content: ''; position: absolute; width: 20px; height: 20px; right: -10px;
-            background-color: var(--primary-color); border: 4px solid var(--bg-color); top: 15px; border-radius: 50%; z-index: 1;
-        }
-        .left { left: 0; }
-        .right { left: 50%; }
-        .right::after { left: -10px; }
-        
-        .timeline-content {
-            padding: 25px; background-color: var(--bg-card); position: relative; border-radius: 15px;
-            transition: all 0.3s ease; border: 1px solid var(--border-subtle);
-            box-shadow: var(--card-shadow);
-        }
-        .timeline-content:hover {
-            transform: translateY(-5px); box-shadow: var(--card-shadow-hover); border-color: rgba(13, 202, 240, 0.3);
-        }
-        .timeline-date { color: var(--primary-color); font-weight: 700; margin-bottom: 5px; font-size: 0.9rem; }
-        .timeline-role { font-size: 1.25rem; font-weight: 700; color: var(--text-main); }
-        .timeline-company { color: var(--text-muted); font-style: italic; margin-bottom: 15px; }
-        .timeline-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
-
+        /* 5. LINHA DO TEMPO CENTRAL ALTERNADA E TAGS */
+        .timeline { position: relative; max-width: 1140px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 3px; background-color: var(--border-color); top: 0; bottom: 0; left: 50%; margin-left: -1.5px; border-radius: 2px; }
+        .timeline-item { padding: 10px 40px; position: relative; width: 50%; margin-bottom: 24px; }
+        .timeline-item::after { content: ''; position: absolute; width: 18px; height: 18px; right: -9px; background-color: var(--primary); border: 4px solid var(--bg-alt); top: 24px; border-radius: 50%; z-index: 1; }
+        .timeline-item.left { left: 0; }
+        .timeline-item.right { left: 50%; }
+        .timeline-item.right::after { left: -9px; }
+        .timeline-date { display: inline-block; color: var(--primary); background: var(--primary-soft); padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: 0.82rem; margin-bottom: 6px; }
+        .timeline-company { color: var(--text-muted); font-style: italic; font-size: 0.92rem; margin-bottom: 12px; }
         @media screen and (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-item::after { left: 21px; }
-            .left::after, .right::after { left: 21px; }
-            .right { left: 0%; }
-            .hero-img-container { width: 250px; height: 250px; }
-            .hero-title { font-size: 2.5rem; }
+            .timeline::after { left: 24px; }
+            .timeline-item { width: 100%; padding-left: 58px; padding-right: 12px; }
+            .timeline-item.left::after, .timeline-item.right::after { left: 15px; }
+            .timeline-item.right { left: 0%; }
         }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+        .tag-badge { background: var(--bg-alt); color: var(--text-main); border: 1px solid var(--border-color); padding: 5px 11px; border-radius: 6px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; }
+        .tag-badge i { color: var(--primary); }
+        .avatar-initials { width: 46px; height: 46px; border-radius: 10px; background: var(--primary-soft); color: var(--primary); border: 1px solid var(--primary); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+        footer { background-color: var(--bg-alt); border-top: 1px solid var(--border-color); padding: 64px 0 32px 0; }
+        .contact-link { color: var(--text-main); text-decoration: none; font-weight: 500; }
+        .contact-link:hover { color: var(--primary); text-decoration: underline; }
 
-        .skill-card {
-            background-color: var(--bg-card); border-radius: 15px; padding: 30px 20px;
-            text-align: center; transition: all 0.3s ease; height: 100%; border: 1px solid var(--border-subtle);
-            box-shadow: var(--card-shadow);
+        /* 6. ACESSIBILIDADE VISUAL, COGNITIVA E MOTORA */
+        html[data-contrast="high"] {
+            --bg-main: #000000 !important; --bg-alt: #0a0a0a !important; --bg-card: #000000 !important; --bg-navbar: rgba(0, 0, 0, 0.98) !important;
+            --primary: #ffd700 !important; --primary-strong: #ffea00 !important; --primary-soft: rgba(255, 215, 0, 0.22) !important;
+            --text-main: #ffffff !important; --text-muted: #ffffff !important; --border-color: #ffd700 !important; --btn-text: #000000 !important;
         }
-        .skill-card:hover {
-            transform: translateY(-10px); background-color: var(--bg-card-hover); box-shadow: var(--card-shadow-hover);
-        }
-        .skill-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 15px; }
-        .skill-name { font-weight: 600; color: var(--text-main); }
-
-        /* Áreas de Conhecimento */
-        .knowledge-card {
-            background-color: var(--bg-card); border-radius: 15px; padding: 30px; height: 100%;
-            border: 1px solid var(--border-subtle); transition: all 0.3s ease;
-            box-shadow: var(--card-shadow);
-        }
-        .knowledge-card:hover {
-            transform: translateY(-5px); box-shadow: var(--card-shadow-hover); border-color: rgba(13, 202, 240, 0.3);
-        }
-        .knowledge-icon-wrapper {
-            width: 50px; height: 50px; border: 1px solid rgba(13, 202, 240, 0.3); border-radius: 12px;
-            display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
-            color: var(--primary-color); margin-bottom: 20px; background-color: rgba(13, 202, 240, 0.05);
-        }
-        .knowledge-title {
-            color: var(--text-main); font-size: 1.15rem; font-weight: 700; margin-bottom: 25px; min-height: 55px;
-        }
-        .knowledge-list { list-style: none; padding: 0; margin: 0; }
-        .knowledge-list li { color: var(--text-muted); margin-bottom: 15px; display: flex; align-items: center; font-size: 0.95rem; }
-        .knowledge-list li i { color: var(--primary-dark); width: 25px; font-size: 1.1rem; margin-right: 10px; text-align: center; }
-
-        /* Projetos */
-        .project-card {
-            background-color: var(--bg-card); border-radius: 15px; overflow: hidden;
-            transition: transform 0.3s, background-color 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid var(--border-subtle); height: 100%;
-            box-shadow: var(--card-shadow);
-        }
-        .project-card:hover { transform: translateY(-10px); box-shadow: var(--card-shadow-hover); }
-        .project-img { height: 200px; background-size: cover; background-position: center; border-bottom: 2px solid var(--primary-color); }
-        .pj-1 { background-image: var(--projeto-1); }
-        .pj-2 { background-image: var(--projeto-2); }
-        .pj-3 { background-image: var(--projeto-3); }
-        .project-content { padding: 25px; }
-        .project-title { color: var(--text-main); font-size: 1.25rem; font-weight: 700; margin-bottom: 15px; }
-        .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
-        .project-tags span {
-            background: rgba(13, 202, 240, 0.1); color: var(--primary-color); padding: 5px 12px;
-            border-radius: 20px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 5px;
-        }
-
-        /* Recomendações */
-        .testimonial-card {
-            background-color: var(--bg-card); border-radius: 20px; padding: 30px; position: relative;
-            height: 100%; border: 1px solid var(--border-subtle);
-            box-shadow: var(--card-shadow);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .quote-icon { position: absolute; top: 20px; right: 20px; font-size: 3rem; color: rgba(13, 202, 240, 0.12); }
-        .testimonial-text { color: var(--text-muted); font-style: italic; margin-bottom: 20px; line-height: 1.7; }
-        .testimonial-author { display: flex; align-items: center; }
-        .author-avatar {
-            width: 60px; height: 60px; border-radius: 50%; background-size: cover;
-            background-position: center; margin-right: 15px; border: 2px solid var(--primary-color);
-        }
-        .av-1 { background-image: var(--avatar-1); }
-        .av-2 { background-image: var(--avatar-2); }
-        .av-3 { background-image: var(--avatar-3); }
-        .av-4 { background-image: var(--avatar-4); }
-        .author-info h5 { margin: 0; font-size: 1.1rem; color: var(--text-main); }
-        .author-info p { margin: 0; color: var(--primary-color); font-size: 0.9rem; }
-
-        #contato { background-color: var(--bg-footer); padding: 80px 0 40px 0; border-top: 1px solid var(--border-subtle); transition: background-color 0.3s ease; }
-        .contact-item { display: flex; align-items: center; margin-bottom: 25px; }
-        .contact-icon {
-            width: 50px; height: 50px; background-color: rgba(13, 202, 240, 0.1); color: var(--primary-color);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-right: 20px;
-        }
-        .contact-link { color: var(--text-muted); text-decoration: none; transition: color 0.3s ease; }
-        .hover-cyan:hover { color: var(--primary-color) !important; }
-        .social-links a {
-            display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px;
-            background-color: var(--bg-card); color: var(--text-main); border-radius: 50%; margin-right: 10px;
-            font-size: 1.2rem; transition: all 0.3s; text-decoration: none;
-            border: 1px solid var(--border-subtle); box-shadow: var(--card-shadow);
-        }
-        .social-links a:hover { background-color: var(--primary-color); color: var(--btn-primary-text); transform: translateY(-3px); }
-        .footer-bottom { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-subtle); text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+        html[data-dyslexia="true"] body { letter-spacing: 0.04em !important; word-spacing: 0.14em !important; line-height: 2.05 !important; }
+        html[data-dyslexia="true"] * { font-style: normal !important; }
+        html[data-links="underline"] a { text-decoration: underline !important; text-underline-offset: 4px !important; text-decoration-thickness: 2px !important; }
+        .reading-guide { position: fixed; left: 0; width: 100vw; height: 36px; background: rgba(255, 215, 0, 0.18); border-top: 2px solid var(--primary); border-bottom: 2px solid var(--primary); pointer-events: none; z-index: 1999; display: none; transform: translateY(-50%); }
+        html[data-guide="true"] .reading-guide { display: block; }
+        .a11y-fab { position: fixed; bottom: 24px; left: 24px; width: 56px; height: 56px; border-radius: 50%; background-color: var(--primary); color: var(--btn-text); border: 3px solid var(--bg-main); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45); display: flex; align-items: center; justify-content: center; font-size: 1.55rem; cursor: pointer; z-index: 1060; transition: transform 0.2s ease; }
+        .a11y-fab:hover { transform: scale(1.08); }
+        .a11y-panel { position: fixed; bottom: 90px; left: 24px; width: 325px; max-width: calc(100vw - 32px); background-color: var(--bg-card); border: 2px solid var(--primary); border-radius: 16px; padding: 18px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5); z-index: 1060; display: none; }
+        .a11y-panel.open { display: block; }
+        .a11y-btn { width: 100%; text-align: left; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--bg-alt); color: var(--text-main); font-size: 0.88rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 8px; transition: all 0.2s ease; }
+        .a11y-btn:hover, .a11y-btn[aria-pressed="true"] { border-color: var(--primary); background-color: var(--primary-soft); color: var(--primary); }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarNav">
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand brand-font" href="#home">Jackson<span>.</span></a>
-            <div class="d-flex align-items-center gap-2 order-lg-last ms-lg-3">
-                <button id="langToggle" class="lang-toggle-btn" type="button" aria-label="Traduzir site para Inglês / Português" title="Switch to English">
-                    <i class="fa-solid fa-globe"></i>
-                    <span id="langLabel">EN</span>
-                </button>
-                <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema">
-                    <i class="fa-solid fa-sun" id="themeIcon"></i>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menu de navegação">
-                    <i class="fa-solid fa-bars" style="color: var(--text-main);"></i>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav_home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre" data-i18n="nav_about">Sobre Mim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experiencia" data-i18n="nav_exp">Experiência</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#conhecimentos" data-i18n="nav_knowledge">Conhecimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projetos" data-i18n="nav_projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#recomendacoes" data-i18n="nav_testimonials">Recomendações</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato" data-i18n="nav_contact">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <a href="#conteudo-principal" class="skip-link" data-en="Skip to main content">Pular para o conteúdo principal</a>
 
-    <!-- SEÇÃO 1: HERO / INÍCIO -->
-    <section id="home">
-        <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-7 text-center text-lg-start mt-5 mt-lg-0">
-                    <h5 class="text-uppercase" style="color: var(--primary-color); letter-spacing: 2px;" data-i18n="hero_greeting">Olá, eu sou</h5>
-                    <h1 class="hero-title">Jackson <span>Ricardo</span></h1>
-                    <h2 class="hero-subtitle" data-i18n="hero_subtitle">Analista de Sistemas | ERP, SQL e Integrações</h2>
-                    <p class="mb-4 text-muted" style="max-width: 600px; margin: 0 auto; margin-left: 0;" data-i18n="hero_desc">
-                        Transformando problemas complexos em soluções eficientes através de sistemas ERP, desenvolvimento de software, dados e integrações.
-                    </p>
-                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#experiencia" class="btn btn-custom btn-primary-custom" data-i18n="hero_btn_exp">Ver Experiências</a>
-                        <a href="Curriculo_Jackson_Ricardo.pdf" download="Curriculo_Jackson_Ricardo.pdf" class="btn btn-custom btn-outline-custom"><i class="fa-solid fa-download me-2"></i><span data-i18n="hero_btn_cv">Baixar Currículo</span></a>
+    <!-- CABEÇALHO -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Navegação principal">
+            <div class="container">
+                <a class="navbar-brand brand-font" href="#home">Jackson<span>.</span></a>
+                <div class="d-flex align-items-center gap-2 order-lg-last ms-lg-3">
+                    <button id="paletteToggle" class="control-btn" type="button" aria-label="Alternar paleta de cores de TI" title="Testar outra paleta de cores">
+                        <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                        <span id="paletteLabel" class="d-none d-md-inline mono">Terminal</span>
+                    </button>
+                    <button id="langToggle" class="control-btn mono" type="button" aria-label="Mudar idioma para Inglês ou Português">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                        <span id="langLabel">EN</span>
+                    </button>
+                    <button id="themeToggle" class="control-btn" type="button" aria-label="Alternar entre tema claro e escuro">
+                        <i class="fa-solid fa-sun" id="themeIcon" aria-hidden="true"></i>
+                        <span id="themeLabel" class="d-none d-sm-inline" data-en="Light">Claro</span>
+                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+                        <i class="fa-solid fa-bars" style="color: var(--text-main);" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-1 mt-3 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#home" data-en="Home">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre" data-en="About Me">Sobre Mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projetos" data-en="Projects">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiencia" data-en="Experience">Experiência</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#habilidades" data-en="Skills">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#recomendacoes" data-en="Recommendations">Recomendações</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato" data-en="Contact">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <!-- 1. APRESENTAÇÃO (HERO) -->
+        <section id="home" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="row align-items-center gy-5 flex-column-reverse flex-lg-row">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <p class="text-uppercase fw-bold mb-2" style="color: var(--primary); letter-spacing: 2px; font-size: 0.9rem;" data-en="HELLO, I AM">OLÁ, EU SOU</p>
+                        <h1 id="hero-heading" class="hero-title">Jackson <span style="color: var(--primary);">Ricardo</span></h1>
+                        <h2 class="h4 fw-semibold mb-3 hero-subtitle" style="color: var(--text-muted);" data-en="Systems & Data Analyst | ERP, SQL, Power BI & Integrations">Analista de Sistemas & Dados | ERP, SQL, Power BI e Integrações</h2>
+                        <p class="text-muted mb-4" style="max-width: 600px;" data-en="Over 5 years of experience helping public institutions and companies keep their systems stable, integrate platforms, migrate databases safely, and turn data into clear indicators.">Mais de 5 anos de experiência ajudando instituições públicas e empresas a manterem seus sistemas estáveis, integrarem plataformas, migrarem bancos de dados com segurança e transformarem dados em indicadores claros.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#projetos" class="btn-custom btn-primary-custom"><span data-en="See real projects">Ver projetos reais</span></a>
+                            <a href="Curriculo_Jackson_Ricardo.pdf" download="Curriculo_Jackson_Ricardo.pdf" class="btn-custom btn-outline-custom">
+                                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                                <span data-en="Download Resume (PDF)">Baixar Currículo (PDF)</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="hero-img-container"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 2: SOBRE MIM -->
-    <section id="sobre" class="section-alt">
-        <div class="container">
-            <h2 class="section-title" data-i18n="about_title">Sobre Mim</h2>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <h3 class="mb-4 brand-font" data-i18n="about_subtitle">Minha Trajetória Profissional</h3>
-                    <p class="about-text" data-i18n-html="about_p1">
-                        Analista de Sistemas graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> e pós-graduado em <strong>Ciência de Dados</strong>, com mais de 5 anos de experiência em TI.
-                    </p>
-                    <p class="about-text" data-i18n-html="about_p2">
-                        Atuação sólida em implantação de sistemas <strong>ERP (SUAP)</strong>, levantamento e análise de requisitos, desenvolvimento e manutenção de sistemas (<strong>Python, JavaScript, Django, React, PostgreSQL e SQL</strong>), integração entre sistemas, elaboração de documentação técnica e funcional e suporte a usuários.
-                    </p>
-                    <p class="about-text" data-i18n-html="about_p3">
-                        Possuo formação técnica em <strong>Redes de Computadores</strong> e experiência com o sistema <strong>TOTVS</strong>, além de vivência em gerenciamento de atividades com <strong>Scrum e Kanban</strong> e certificação <strong>ITIL V3 Foundation</strong>.
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <h4 class="mb-3"><i class="fa-solid fa-graduation-cap me-2" style="color: var(--primary-color);"></i> <span data-i18n="edu_heading">Formação Acadêmica</span></h4>
-                            <div class="edu-card">
-                                <h5 class="mb-1" data-i18n="edu_1_title">Análise e Desenvolvimento de Sistemas</h5>
-                                <p class="text-muted mb-0" data-i18n="edu_1_inst">IFRN - Instituto Federal do Rio Grande do Norte (2018 – 2024)</p>
-                            </div>
-                            <div class="edu-card">
-                                <h5 class="mb-1" data-i18n="edu_2_title">Técnico em Redes de Computadores</h5>
-                                <p class="text-muted mb-0" data-i18n="edu_2_inst">IMD - Instituto Metrópole Digital (2016 – 2018)</p>
-                            </div>
-                        </div>
-                        <div class="col-12 mt-4">
-                            <h4 class="mb-3"><i class="fa-solid fa-certificate me-2" style="color: var(--primary-color);"></i> <span data-i18n="postgrad_heading">Pós-graduações</span></h4>
-                            <div class="edu-card">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <span data-i18n="postgrad_1">Especialização em Ciência de Dados (concluída em 2025)</span></li>
-                                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <span data-i18n="postgrad_2">Especialização em Tecnologia, Agilidade e Inovação — Gran Centro Universitário (cursando)</span></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="col-lg-5 text-center">
+                        <figure class="photo-frame mb-0">
+                            <img src="fotos/perfil.jpg" alt="Retrato profissional de Jackson Ricardo usando óculos e camiseta preta sobre fundo azul escuro" class="hero-photo" width="280" height="280">
+                            <figcaption class="photo-caption mono" data-en="ADS @ IFRN • Data Science Postgrad">ADS @ IFRN • Pós em Ciência de Dados</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SEÇÃO 3: EXPERIÊNCIA -->
-    <section id="experiencia">
-        <div class="container">
-            <h2 class="section-title" data-i18n="exp_title">Experiência Profissional</h2>
-            <div class="timeline">
+        <!-- 2. SOBRE MIM & FORMAÇÃO -->
+        <section id="sobre" class="section-alt" aria-labelledby="sobre-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-index mono">01. // sobre_mim</span>
+                    <h2 id="sobre-heading" class="section-title" data-en="How I got here and how I work">De onde vim e como trabalho</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="card-surface">
+                            <p class="text-muted" data-en="My career in IT started close to the hardware and the user: configuring networks, fixing machines, and answering support tickets. That foundation taught me something I carry into software and data projects today—a system is only good if the person on the other side can actually use it.">Comecei na TI perto dos cabos e de quem usa o computador no dia a dia: configurando redes no curso técnico do IMD, resolvendo chamados no serviço público e ouvindo usuários. Essa base me ensinou algo que levo até hoje para o desenvolvimento e para os dados: <strong>um sistema só é bom quando facilita a vida de quem está do outro lado da tela.</strong></p>
+                            <p class="text-muted" data-en="During my Systems Analysis and Development degree at IFRN, I moved into web development with Python, Django, and PostgreSQL, helping deploy the SUAP academic ERP in federal institutions (UFR and IFMT) and migrating critical relational databases.">Na graduação em <strong>Análise e Desenvolvimento de Sistemas no IFRN</strong>, mergulhei no desenvolvimento web com Python, Django e PostgreSQL. Participei da implantação do ERP acadêmico <strong>SUAP</strong> em duas instituições federais (UFR e IFMT), escrevendo scripts SQL de migração, validando integridade de dados e documentando regras de negócio.</p>
+                            <p class="text-muted mb-0" data-en="More recently, I completed my postgraduate specialization in Data Science and began focusing on ETL pipelines, Python automation, and Power BI dashboards at SENAC and PGFN/CE—while also enjoying teaching and mentoring interns along the way.">Mais recentemente, concluí a pós-graduação em <strong>Ciência de Dados</strong> e passei a atuar diretamente com pipelines ETL, automação em Python e painéis em Power BI no <strong>SENAC</strong> e na <strong>PGFN/CE</strong>. Como também já fui professor mediador e tutor, gosto de documentar o que faço e explicar decisões técnicas sem complicar.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card-surface">
+                            <h3 class="h5 fw-bold mb-3 mono"><i class="fa-solid fa-graduation-cap me-2" style="color: var(--primary);" aria-hidden="true"></i><span data-en="Academic Background">Formação Acadêmica</span></h3>
+                            <div class="context-step">
+                                <strong class="mono" data-en="In progress">Cursando</strong>
+                                <div class="fw-bold" data-en="Postgraduate in Technology, Agility & Innovation">Especialização em Tecnologia, Agilidade e Inovação</div>
+                                <div class="text-muted small">Gran Centro Universitário</div>
+                            </div>
+                            <div class="context-step">
+                                <strong class="mono" data-en="Completed in 2025">Concluída em 2025</strong>
+                                <div class="fw-bold" data-en="Postgraduate in Data Science">Especialização em Ciência de Dados</div>
+                                <div class="text-muted small" data-en="Focus on ETL, SQL, Python & BI">Foco em ETL, SQL, Python e BI</div>
+                            </div>
+                            <div class="context-step">
+                                <strong class="mono">2018 – 2024</strong>
+                                <div class="fw-bold" data-en="B.S. in Systems Analysis and Development">Graduação em Análise e Desenvolvimento de Sistemas</div>
+                                <div class="text-muted small">IFRN — Instituto Federal do Rio Grande do Norte</div>
+                            </div>
+                            <div class="context-step mb-0">
+                                <strong class="mono">2016 – 2018</strong>
+                                <div class="fw-bold" data-en="Computer Networks Technician">Técnico em Redes de Computadores</div>
+                                <div class="text-muted small">IMD / UFRN — Instituto Metrópole Digital</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_senac_date">2023 – 2024 · 1 ano e Fev 2026 – atual · 9 meses</div>
-                        <h3 class="timeline-role" data-i18n="exp_senac_role">Desenvolvedor Web e Assistente de Suporte de TI</h3>
+        <!-- 3. PROJETOS COM CONTEXTO -->
+        <section id="projetos" aria-labelledby="proj-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-index mono">02. // projetos_reais</span>
+                    <h2 id="proj-heading" class="section-title" data-en="Projects in Context">Projetos com Contexto</h2>
+                    <p class="text-muted mb-0" data-en="The problem we faced, what I built, and the practical result.">O problema que existia, o que construí na prática e o resultado alcançado.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <article class="card-surface d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="mono small" style="color: var(--primary);">IFRN • SUAP ERP</span>
+                                    <i class="fa-solid fa-user-graduate" style="color: var(--primary);" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" data-en="Student Support Module (SUAP)">Módulo de Atendimento Pedagógico (SUAP)</h3>
+                                <div class="context-step"><strong data-en="The Problem">O Problema</strong><p class="text-muted small mb-0" data-en="Students and pedagogical staff at IFRN Natal-Central had difficulty tracking support requests, hindering early dropout prevention.">Estudantes e a equipe pedagógica do IFRN Natal-Central tinham dificuldade para registrar e acompanhar atendimentos, dificultando a prevenção da evasão escolar.</p></div>
+                                <div class="context-step"><strong data-en="What I Did">O que fiz</strong><p class="text-muted small mb-0" data-en="Interviewed staff and students, mapped requirements, and developed a dedicated support module integrated into the SUAP ERP using Python, Django, and PostgreSQL.">Ouvi servidores e alunos, levantei os requisitos e desenvolvi um módulo integrado ao SUAP em Python, Django e PostgreSQL.</p></div>
+                                <div class="context-step"><strong data-en="The Result">O Resultado</strong><p class="text-muted small mb-3" data-en="Centralized student follow-up history inside the institution's main ERP, making pedagogical support faster and more accessible.">Centralização do histórico de atendimento dentro do próprio sistema acadêmico, aproximando o aluno do acompanhamento pedagógico.</p></div>
+                            </div>
+                            <ul class="tag-list mono">
+                                <li class="tag-badge"><i class="fa-brands fa-python" aria-hidden="true"></i>Python</li>
+                                <li class="tag-badge"><i class="fa-solid fa-code" aria-hidden="true"></i>Django</li>
+                                <li class="tag-badge"><i class="fa-solid fa-database" aria-hidden="true"></i>PostgreSQL</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-lg-4">
+                        <article class="card-surface d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="mono small" style="color: var(--primary);">Data Science • NLP</span>
+                                    <i class="fa-solid fa-chart-simple" style="color: var(--primary);" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" data-en="Automated Sentiment Analysis Pipeline">Pipeline de Análise de Sentimentos com NLP</h3>
+                                <div class="context-step"><strong data-en="The Problem">O Problema</strong><p class="text-muted small mb-0" data-en="Analyzing thousands of unstructured customer reviews manually is slow and prone to inconsistent interpretation.">Avaliar manualmente milhares de comentários abertos de clientes na base da Amazon era inviável e sujeito a interpretações inconsistentes.</p></div>
+                                <div class="context-step"><strong data-en="What I Did">O que fiz</strong><p class="text-muted small mb-0" data-en="Built an end-to-end Python pipeline with Pandas and TextBlob to clean text, validate records, and classify polarity automatically.">Construí um pipeline ponta a ponta em Python com Pandas e TextBlob para limpeza textual, validação e extração automática de polaridade.</p></div>
+                                <div class="context-step"><strong data-en="The Result">O Resultado</strong><p class="text-muted small mb-3" data-en="Automated reports showing sentiment distribution per product category, turning raw text into clear product metrics.">Geração automatizada de relatórios com a distribuição de sentimentos por categoria, transformando texto bruto em indicadores claros.</p></div>
+                            </div>
+                            <ul class="tag-list mono">
+                                <li class="tag-badge"><i class="fa-brands fa-python" aria-hidden="true"></i>Pandas</li>
+                                <li class="tag-badge"><i class="fa-solid fa-brain" aria-hidden="true"></i>NLP / TextBlob</li>
+                                <li class="tag-badge"><i class="fa-solid fa-gears" aria-hidden="true"></i>ETL</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-lg-4">
+                        <article class="card-surface d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="mono small" style="color: var(--primary);">PoP-RN & TJRN</span>
+                                    <i class="fa-solid fa-shield-halved" style="color: var(--primary);" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" data-en="DDoS Protection Network (RdP-DDoS)">Rede de Proteção DDoS (RdP-DDoS)</h3>
+                                <div class="context-step"><strong data-en="The Problem">O Problema</strong><p class="text-muted small mb-0" data-en="Public institutional networks needed rapid detection and mitigation mechanisms against Denial-of-Service (DDoS) traffic spikes.">Redes corporativas públicas precisavam detectar e mitigar rapidamente picos de tráfego malicioso gerados por ataques de negação de serviço.</p></div>
+                                <div class="context-step"><strong data-en="What I Did">O que fiz</strong><p class="text-muted small mb-0" data-en="During 3-month rotations at PoP-RN and TJRN, applied traffic analysis tools and configured mitigation rules against volumetric attacks.">Em ciclos práticos de 3 meses no PoP-RN e no TJRN, apliquei ferramentas de análise de tráfego e mecanismos de detecção e mitigação na rede.</p></div>
+                                <div class="context-step"><strong data-en="The Result">O Resultado</strong><p class="text-muted small mb-3" data-en="Improved visibility and response readiness against malicious traffic on critical public infrastructure.">Maior visibilidade de tráfego anômalo e resposta mais rápida para preservar a disponibilidade dos serviços das duas instituições.</p></div>
+                            </div>
+                            <ul class="tag-list mono">
+                                <li class="tag-badge"><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span data-en="Networking">Redes</span></li>
+                                <li class="tag-badge"><i class="fa-solid fa-lock" aria-hidden="true"></i><span data-en="Security">Segurança</span></li>
+                                <li class="tag-badge"><i class="fa-brands fa-linux" aria-hidden="true"></i>Linux</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERIÊNCIA PROFISSIONAL (Linha do Tempo Central Alternada) -->
+        <section id="experiencia" class="section-alt" aria-labelledby="exp-heading">
+            <div class="container">
+                <div class="section-header text-center mx-auto">
+                    <span class="section-index mono">03. // experiencia_profissional</span>
+                    <h2 id="exp-heading" class="section-title" data-en="Professional Experience">Experiência Profissional</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item left"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="2023 – 2024 · 1 yr & Feb 2026 – Present · 9 mos">2023 – 2024 · 1 ano e Fev 2026 – atual · 9 meses</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Web Developer & IT Support Assistant">Desenvolvedor Web e Assistente de Suporte de TI</h3>
                         <div class="timeline-company">SENAC</div>
-                        <p class="timeline-text mb-2" data-i18n-html="exp_senac_desc1"><strong>Assistente de Suporte de TI (Fev 2026 – atual):</strong> Automação de rotinas com Python, desenvolvimento de sistemas básicos e dashboards em Power BI com ETL. Documentação de fluxos de dados e regras de negócio, gestão de chamados via GLPI (SLA) e coordenação de estagiários.</p>
-                        <p class="timeline-text mb-0" data-i18n-html="exp_senac_desc2"><strong>Desenvolvedor Web (2023 – 2024):</strong> Implantação de sistema e desenvolvimento front-end e back-end em Software House, com Python, JavaScript, Django, React e PostgreSQL. Implementação de funcionalidades, correção de bugs e integração de sistemas, em trabalho em equipe.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-2" data-en="<strong>IT Support Assistant (Feb 2026 – Present):</strong> Task automation with Python, development of core systems, and Power BI dashboards with ETL. Documentation of data flows and business rules, ticket management via GLPI (SLA), and intern coordination."><strong>Assistente de Suporte de TI (Fev 2026 – atual):</strong> Automação de rotinas com Python, desenvolvimento de sistemas básicos e dashboards em Power BI com ETL. Documentação de fluxos de dados e regras de negócio, gestão de chamados via GLPI (SLA) e coordenação de estagiários.</p>
+                        <p class="text-muted small mb-0" data-en="<strong>Web Developer (2023 – 2024):</strong> System deployment and front-end/back-end development in a Software House using Python, JavaScript, Django, React, and PostgreSQL. Feature implementation, bug fixing, and system integration in a collaborative team environment."><strong>Desenvolvedor Web (2023 – 2024):</strong> Implantação de sistema e desenvolvimento front-end e back-end em Software House, com Python, JavaScript, Django, React e PostgreSQL. Implementação de funcionalidades, correção de bugs e integração de sistemas, em trabalho em equipe.</p>
+                    </div></article>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_pgfn_date">Fev 2026 – Out 2026</div>
-                        <h3 class="timeline-role" data-i18n="exp_pgfn_role">Analista de Dados</h3>
-                        <div class="timeline-company" data-i18n="exp_pgfn_comp">Procuradoria-Geral da Fazenda Nacional (PGFN/CE) • Remoto</div>
-                        <p class="timeline-text" data-i18n="exp_pgfn_desc">Extração, tratamento e validação de dados operacionais e jurídicos a partir de múltiplas fontes, garantindo qualidade e consistência das bases para análise. Construção de dashboards analíticos e relatórios em Power BI para monitoramento de KPIs institucionais. Desenvolvimento de pipelines ETL e modelagem de dados no contexto do Projeto Argos (Protocolo 0), integrando fontes heterogêneas e automatizando rotinas de análise. Atuação no LABTI documentando processos, regras de negócio e definições de dados, em ambiente ágil com Scrum e Kanban.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_salta_date">2025 · 8 meses</div>
-                        <h3 class="timeline-role" data-i18n="exp_salta_role">Assistente de TI</h3>
+                    <article class="timeline-item right"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="Feb 2026 – Oct 2026">Fev 2026 – Out 2026</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Data Analyst">Analista de Dados</h3>
+                        <div class="timeline-company" data-en="Office of the Attorney General for the National Treasury (PGFN/CE) • Remote">Procuradoria-Geral da Fazenda Nacional (PGFN/CE) • Remoto</div>
+                        <p class="text-muted small mb-0" data-en="Extraction, transformation, and validation of operational and legal data from multiple sources, ensuring data quality and consistency for analysis. Built analytical dashboards and reports in Power BI to monitor institutional KPIs. Developed ETL pipelines and data models within Project Argos (Protocolo 0), integrating heterogeneous sources and automating analytical routines. Worked at LABTI documenting processes, business rules, and data definitions in an Agile environment using Scrum and Kanban.">Extração, tratamento e validação de dados operacionais e jurídicos a partir de múltiplas fontes, garantindo qualidade e consistência das bases para análise. Construção de dashboards analíticos e relatórios em Power BI para monitoramento de KPIs institucionais. Desenvolvimento de pipelines ETL e modelagem de dados no contexto do Projeto Argos (Protocolo 0), integrando fontes heterogêneas e automatizando rotinas de análise. Atuação no LABTI documentando processos, regras de negócio e definições de dados, em ambiente ágil com Scrum e Kanban.</p>
+                    </div></article>
+
+                    <article class="timeline-item left"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="2025 · 8 mos">2025 · 8 meses</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="IT Assistant">Assistente de TI</h3>
                         <div class="timeline-company">Grupo Salta Educação</div>
-                        <p class="timeline-text" data-i18n="exp_salta_desc">Suporte técnico N1 e N2, atuando na análise e resolução de incidentes, instalação e manutenção de softwares, configuração de redes, criação de VPNs e Access Points Unifi, gerenciamento de contas e permissões no Active Directory e suporte ao sistema TOTVS. Responsável pelo atendimento técnico, registro e acompanhamento de chamados, documentação de soluções e suporte aos usuários. Monitoramento de infraestrutura utilizando Zabbix e Grafana, assegurando disponibilidade e desempenho dos serviços.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-0" data-en="Tier 1 and Tier 2 technical support, acting on incident analysis and resolution, software installation and maintenance, network configuration, VPN and Unifi Access Point setup, Active Directory account and permission management, and TOTVS ERP support. Responsible for technical assistance, ticket tracking, solution documentation, and infrastructure monitoring using Zabbix and Grafana.">Suporte técnico N1 e N2, atuando na análise e resolução de incidentes, instalação e manutenção de softwares, configuração de redes, criação de VPNs e Access Points Unifi, gerenciamento de contas e permissões no Active Directory e suporte ao sistema TOTVS. Responsável pelo atendimento técnico, registro e acompanhamento de chamados, documentação de soluções e suporte aos usuários. Monitoramento de infraestrutura utilizando Zabbix e Grafana, assegurando disponibilidade e desempenho dos serviços.</p>
+                    </div></article>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_sr_date">Jun 2024 – Dez 2024 · 6 meses</div>
-                        <h3 class="timeline-role" data-i18n="exp_sr_role">Desenvolvedor Full Stack</h3>
-                        <div class="timeline-company" data-i18n="exp_sr_comp">Service Rapide (presencial)</div>
-                        <p class="timeline-text" data-i18n="exp_sr_desc">Desenvolvimento com Python, Django e PostgreSQL de módulos de visualização e análise de imagens médicas (DICOM). Integração de chatbot com inteligência artificial (Gemini) ao sistema e implementação de interfaces em JavaScript a partir de protótipos no Figma, em ciclos Scrum com múltiplas áreas, documentando requisitos e entregas.</p>
-                    </div>
-                </div>
+                    <article class="timeline-item right"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="Jun 2024 – Dec 2024 · 6 mos">Jun 2024 – Dez 2024 · 6 meses</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Full Stack Developer">Desenvolvedor Full Stack</h3>
+                        <div class="timeline-company" data-en="Service Rapide (On-site)">Service Rapide (presencial)</div>
+                        <p class="text-muted small mb-0" data-en="Developed medical image (DICOM) visualization and analysis modules using Python, Django, and PostgreSQL. Integrated an AI-powered chatbot (Gemini) into the system and implemented JavaScript interfaces from Figma prototypes within cross-functional Scrum sprints, documenting requirements and deliverables.">Desenvolvimento com Python, Django e PostgreSQL de módulos de visualização e análise de imagens médicas (DICOM). Integração de chatbot com inteligência artificial (Gemini) ao sistema e implementação de interfaces em JavaScript a partir de protótipos no Figma, em ciclos Scrum com múltiplas áreas, documentando requisitos e entregas.</p>
+                    </div></article>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_funcern_date">Jan 2022 – Jun 2024 · 2 anos e 6 meses</div>
-                        <h3 class="timeline-role" data-i18n="exp_funcern_role">Desenvolvedor Web</h3>
-                        <div class="timeline-company" data-i18n="exp_funcern_comp">FUNCERN (projetos UFR e IFMT)</div>
-                        <p class="timeline-text" data-i18n="exp_funcern_desc">Implantação do SUAP (sistema de gestão/ERP acadêmico) em duas instituições federais, com desenvolvimento back-end em Python, Django e PostgreSQL. Migração de dados, criação e revisão de scripts SQL, testes de integridade e implantação. Elaboração da documentação técnica do sistema e das regras de negócio, além de suporte técnico às equipes da UFR e do IFMT na manipulação do código do SUAP e de aplicativos vinculados.</p>
-                    </div>
-                </div>
+                    <article class="timeline-item left"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="Jan 2022 – Jun 2024 · 2 yrs 6 mos">Jan 2022 – Jun 2024 · 2 anos e 6 meses</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Web Developer">Desenvolvedor Web</h3>
+                        <div class="timeline-company" data-en="FUNCERN (UFR & IFMT Projects)">FUNCERN (projetos UFR e IFMT)</div>
+                        <p class="text-muted small mb-0" data-en="Deployed SUAP (academic ERP/management system) across two federal institutions, with back-end development in Python, Django, and PostgreSQL. Performed data migration, creation and review of SQL scripts, integrity testing, and deployment. Authored technical and business rules documentation, and provided technical support to UFR and IFMT teams.">Implantação do SUAP (sistema de gestão/ERP acadêmico) em duas instituições federais, com desenvolvimento back-end em Python, Django e PostgreSQL. Migração de dados, criação e revisão de scripts SQL, testes de integridade e implantação. Elaboração da documentação técnica do sistema e das regras de negócio, além de suporte técnico às equipes da UFR e do IFMT na manipulação do código do SUAP e de aplicativos vinculados.</p>
+                    </div></article>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_imd_date">2023 · 3 meses</div>
-                        <h3 class="timeline-role" data-i18n="exp_imd_role">Professor Mediador</h3>
+                    <article class="timeline-item right"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="2023 · 3 mos">2023 · 3 meses</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Mediator Instructor">Professor Mediador</h3>
                         <div class="timeline-company">IMD</div>
-                        <p class="timeline-text" data-i18n="exp_imd_desc">Atuei como Professor Mediador de Introdução à Programação com Python, onde ministro aulas abrangentes sobre programação, incluindo conceitos de condicionais, loops, listas, funções, strings, dicionários e controle de versão com Git.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-0" data-en="Served as Mediator Instructor for Introduction to Programming with Python, teaching comprehensive programming concepts including conditionals, loops, lists, functions, strings, dictionaries, and version control with Git.">Atuei como Professor Mediador de Introdução à Programação com Python, onde ministro aulas abrangentes sobre programação, incluindo conceitos de condicionais, loops, listas, funções, strings, dicionários e controle de versão com Git.</p>
+                    </div></article>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date" data-i18n="exp_pesq_date">2023 · 6 meses</div>
-                        <h3 class="timeline-role" data-i18n="exp_pesq_role">Projeto de Pesquisa</h3>
+                    <article class="timeline-item left"><div class="card-surface">
+                        <div class="timeline-date mono" data-en="2023 · 6 mos">2023 · 6 meses</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Research Project">Projeto de Pesquisa</h3>
                         <div class="timeline-company">IFRN</div>
-                        <p class="timeline-text" data-i18n="exp_pesq_desc">Desenvolvimento de soluções tecnológicas para tratar a evasão escolar no Campus Natal-Central. O projeto explora a análise de requisitos e o desenvolvimento de um módulo de atendimento para o setor pedagógico do IFRN através do sistema SUAP.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-0" data-en="Developed technological solutions to address student dropout at the Natal-Central Campus. The project explored requirements analysis and built a student support module for IFRN's pedagogical department within the SUAP system.">Desenvolvimento de soluções tecnológicas para tratar a evasão escolar no Campus Natal-Central. O projeto explora a análise de requisitos e o desenvolvimento de um módulo de atendimento para o setor pedagógico do IFRN através do sistema SUAP.</p>
+                    </div></article>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021-2023</div>
-                        <h3 class="timeline-role" data-i18n="exp_mprn_role">Assistente de TI</h3>
+                    <article class="timeline-item right"><div class="card-surface">
+                        <div class="timeline-date mono">2021 – 2023</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="IT Assistant">Assistente de TI</h3>
                         <div class="timeline-company">MPRN</div>
-                        <p class="timeline-text" data-i18n="exp_mprn_desc">Assistência técnica prestada aos servidores do MPRN, realizando atendimentos ao usuário para sanar problemas técnicos relacionados a equipamentos/serviços de informática. Entre as atividades estão instalação de softwares e drivers, atualização de softwares e manutenção de equipamentos, como também configuração de software de firewall. Além disso, desempenhava funções relacionadas ao desenvolvimento de sistemas, incluindo a atualização de tecnologias já existentes e a proposição de novas rotinas para otimização dos processos.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-0" data-en="Provided technical assistance to MPRN staff, resolving hardware and software issues. Activities included software and driver installation, system updates, hardware maintenance, and firewall configuration, as well as updating legacy systems and proposing new routines for process optimization.">Assistência técnica prestada aos servidores do MPRN, realizando atendimentos ao usuário para sanar problemas técnicos relacionados a equipamentos/serviços de informática. Entre as atividades estão instalação de softwares e drivers, atualização de softwares e manutenção de equipamentos, como também configuração de software de firewall. Além disso, desempenhava funções relacionadas ao desenvolvimento de sistemas, incluindo a atualização de tecnologias já existentes e a proposição de novas rotinas para otimização dos processos.</p>
+                    </div></article>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021-2022</div>
-                        <h3 class="timeline-role" data-i18n="exp_tutor_role">Tutor de Matemática</h3>
+                    <article class="timeline-item left"><div class="card-surface">
+                        <div class="timeline-date mono">2021 – 2022</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Mathematics Tutor">Tutor de Matemática</h3>
                         <div class="timeline-company">IFRN</div>
-                        <p class="timeline-text" data-i18n="exp_tutor_desc">Distribuir exercícios e auxiliar na resolução das questões. Conteúdos: Teoria dos Conjuntos, Funções, Análise Combinatória, Lógica Proposicional.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-0" data-en="Distributed exercises and assisted students in problem-solving. Topics covered: Set Theory, Functions, Combinatorics, and Propositional Logic.">Distribuir exercícios e auxiliar na resolução das questões. Conteúdos: Teoria dos Conjuntos, Funções, Análise Combinatória, Lógica Proposicional.</p>
+                    </div></article>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020-2021</div>
-                        <h3 class="timeline-role" data-i18n="exp_ddos_role">Pesquisa de Extensão</h3>
+                    <article class="timeline-item right"><div class="card-surface">
+                        <div class="timeline-date mono">2020 – 2021</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="Extension Research">Pesquisa de Extensão</h3>
                         <div class="timeline-company">IFRN</div>
-                        <p class="timeline-text" data-i18n="exp_ddos_desc">Projeto de Extensão Contínuo: RdP-DDoS - Rede de proteção contra ataques de negação de serviços. Este projeto foi desenvolvido utilizando a aplicação de ferramentas e técnicas de combate ao DDoS nas redes corporativas do PoP-RN e do TJRN, durante três meses em cada instituição, sendo assim, foram realizados desenvolvimentos de mecanismos que possam detectar e mitigar os impactos do tráfego malicioso gerado por ataques DDoS.</p>
-                    </div>
-                </div>
+                        <p class="text-muted small mb-0" data-en="Continuous Extension Project: RdP-DDoS - Protection network against Denial-of-Service attacks. Applied DDoS mitigation tools and techniques across the corporate networks of PoP-RN and TJRN, developing mechanisms to detect and mitigate malicious DDoS traffic.">Projeto de Extensão Contínuo: RdP-DDoS - Rede de proteção contra ataques de negação de serviços. Este projeto foi desenvolvido utilizando a aplicação de ferramentas e técnicas de combate ao DDoS nas redes corporativas do PoP-RN e do TJRN, durante três meses em cada instituição, sendo assim, foram realizados desenvolvimentos de mecanismos que possam detectar e mitigar os impactos do tráfego malicioso gerado por ataques DDoS.</p>
+                    </div></article>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2017-2018</div>
-                        <h3 class="timeline-role" data-i18n="exp_sms_role">Técnico de Informática</h3>
-                        <div class="timeline-company" data-i18n="exp_sms_comp">Secretaria Municipal de Saúde de Natal</div>
-                        <p class="timeline-text" data-i18n="exp_sms_desc">Assistência técnica prestada aos servidores, realizando atendimentos ao usuário para sanar problemas técnicos relacionados a equipamentos/serviços de informática. Entre as atividades estão instalação de softwares e drivers, atualização de softwares e manutenção de equipamentos, como também configuração de software de firewall. Além disso, desempenhava funções relacionadas ao desenvolvimento de sistemas, incluindo a atualização de tecnologias já existentes e a proposição de novas rotinas para otimização dos processos.</p>
-                    </div>
+                    <article class="timeline-item left"><div class="card-surface">
+                        <div class="timeline-date mono">2017 – 2018</div>
+                        <h3 class="h5 fw-bold mb-1" data-en="IT Technician">Técnico de Informática</h3>
+                        <div class="timeline-company" data-en="Municipal Health Department of Natal">Secretaria Municipal de Saúde de Natal</div>
+                        <p class="text-muted small mb-0" data-en="Provided technical support to public staff, troubleshooting hardware and software issues, installing software and drivers, maintaining equipment, configuring firewall software, and optimizing internal IT processes.">Assistência técnica prestada aos servidores, realizando atendimentos ao usuário para sanar problemas técnicos relacionados a equipamentos/serviços de informática. Entre as atividades estão instalação de softwares e drivers, atualização de softwares e manutenção de equipamentos, como também configuração de software de firewall. Além disso, desempenhava funções relacionadas ao desenvolvimento de sistemas, incluindo a atualização de tecnologias já existentes e a proposição de novas rotinas para otimização dos processos.</p>
+                    </div></article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SEÇÃO 4: HABILIDADES -->
-    <section id="habilidades" class="section-alt">
-        <div class="container">
-            <h2 class="section-title" data-i18n="skills_title">Minhas Habilidades</h2>
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                <div class="col"><div class="skill-card"><i class="fa-brands fa-python skill-icon"></i><h5 class="skill-name">Python</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-code skill-icon"></i><h5 class="skill-name">Django</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-brands fa-react skill-icon"></i><h5 class="skill-name">React</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-file-code skill-icon"></i><h5 class="skill-name">HTML/CSS</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-brands fa-github skill-icon"></i><h5 class="skill-name">GitHub</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-brands fa-linux skill-icon"></i><h5 class="skill-name">Linux</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-database skill-icon"></i><h5 class="skill-name">PostgreSQL</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-network-wired skill-icon"></i><h5 class="skill-name" data-i18n="skill_net">Redes (CCNA)</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-chart-pie skill-icon"></i><h5 class="skill-name">Zabbix & Grafana</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-headset skill-icon"></i><h5 class="skill-name" data-i18n="skill_support">Suporte TI</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-users-cog skill-icon"></i><h5 class="skill-name">Active Directory</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="fa-solid fa-rotate skill-icon"></i><h5 class="skill-name" data-i18n="skill_agile">Metodologias Ágeis</h5></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO EXCLUSIVA: ÁREAS DE CONHECIMENTO -->
-    <section id="conhecimentos" style="background-color: var(--bg-color);">
-        <div class="container">
-            <h2 class="section-title"><i class="fa-regular fa-window-maximize me-2"></i><span data-i18n="know_title">Áreas de Conhecimento</span></h2>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="knowledge-card">
-                        <div class="knowledge-icon-wrapper"><i class="fa-solid fa-code"></i></div>
-                        <h4 class="knowledge-title" data-i18n="know_1_title">Desenvolvimento & Software</h4>
-                        <ul class="knowledge-list">
-                            <li><i class="fa-brands fa-python"></i> Python</li>
-                            <li><i class="fa-solid fa-laptop-code"></i> Django</li>
-                            <li><i class="fa-brands fa-react"></i> React</li>
-                            <li><i class="fa-solid fa-code"></i> HTML</li>
-                            <li><i class="fa-solid fa-code"></i> CSS</li>
-                            <li><i class="fa-solid fa-code"></i> JavaScript</li>
-                            <li><i class="fa-solid fa-database"></i> PostgreSQL</li>
-                            <li><i class="fa-solid fa-code"></i> <span data-i18n="know_1_item8">Desenv. Front/Back-end</span></li>
+        <!-- 5. HABILIDADES & STACK TÉCNICA -->
+        <section id="habilidades" aria-labelledby="skills-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-index mono">04. // stack_tecnica</span>
+                    <h2 id="skills-heading" class="section-title" data-en="Technical Stack & Tools">Ferramentas do Dia a Dia</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6"><div class="card-surface">
+                        <h3 class="h5 fw-bold mb-3"><i class="fa-solid fa-database me-2" style="color: var(--primary);" aria-hidden="true"></i><span data-en="Data, BI & Databases">Dados, BI e Bancos Relacionais</span></h3>
+                        <ul class="tag-list mono">
+                            <li class="tag-badge"><i class="fa-solid fa-table" aria-hidden="true"></i>SQL / PostgreSQL</li>
+                            <li class="tag-badge"><i class="fa-solid fa-server" aria-hidden="true"></i>SQL Server</li>
+                            <li class="tag-badge"><i class="fa-solid fa-chart-column" aria-hidden="true"></i>Power BI (DAX/KPIs)</li>
+                            <li class="tag-badge"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>Pipelines ETL</li>
+                            <li class="tag-badge"><i class="fa-brands fa-python" aria-hidden="true"></i>Python (Pandas)</li>
+                            <li class="tag-badge"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span data-en="Data Modeling">Modelagem de Dados</span></li>
+                            <li class="tag-badge"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>NLP / TextBlob</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="knowledge-card">
-                        <div class="knowledge-icon-wrapper"><i class="fa-solid fa-server"></i></div>
-                        <h4 class="knowledge-title" data-i18n="know_2_title">Infraestrutura & Redes</h4>
-                        <ul class="knowledge-list">
-                            <li><i class="fa-solid fa-terminal"></i> Linux</li>
-                            <li><i class="fa-solid fa-database"></i> Zabbix</li>
-                            <li><i class="fa-solid fa-database"></i> Grafana</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Access Points Unifi</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Active Directory</li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_2_item6">Mitigação DDoS</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> Firewall</li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_2_item8">Redes Corporativas</span></li>
+                    </div></div>
+                    <div class="col-md-6"><div class="card-surface">
+                        <h3 class="h5 fw-bold mb-3"><i class="fa-solid fa-code me-2" style="color: var(--primary);" aria-hidden="true"></i><span data-en="Software Development & ERPs">Desenvolvimento Web e Sistemas ERP</span></h3>
+                        <ul class="tag-list mono">
+                            <li class="tag-badge"><i class="fa-brands fa-python" aria-hidden="true"></i>Python & Django</li>
+                            <li class="tag-badge"><i class="fa-brands fa-js" aria-hidden="true"></i>JavaScript</li>
+                            <li class="tag-badge"><i class="fa-brands fa-react" aria-hidden="true"></i>React</li>
+                            <li class="tag-badge"><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML5 & CSS3</li>
+                            <li class="tag-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i>ERP SUAP & TOTVS</li>
+                            <li class="tag-badge"><i class="fa-solid fa-robot" aria-hidden="true"></i>API Gemini (IA)</li>
+                            <li class="tag-badge"><i class="fa-brands fa-git-alt" aria-hidden="true"></i>Git & GitHub</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="knowledge-card">
-                        <div class="knowledge-icon-wrapper"><i class="fa-solid fa-headset"></i></div>
-                        <h4 class="knowledge-title" data-i18n="know_3_title">Suporte Técnico & Sistemas</h4>
-                        <ul class="knowledge-list">
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="know_3_item1">Suporte N1 e N2</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="know_3_item2">Atendimento ao Usuário</span></li>
-                            <li><i class="fa-solid fa-headset"></i> Helpdesk</li>
-                            <li><i class="fa-solid fa-gear"></i> <span data-i18n="know_3_item4">Manutenção de Hardware</span></li>
-                            <li><i class="fa-solid fa-gear"></i> <span data-i18n="know_3_item5">Instalação de Softwares</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_3_item6">Sistema ERP TOTVS</span></li>
-                            <li><i class="fa-brands fa-github"></i> Git & Github</li>
+                    </div></div>
+                    <div class="col-md-6"><div class="card-surface">
+                        <h3 class="h5 fw-bold mb-3"><i class="fa-solid fa-network-wired me-2" style="color: var(--primary);" aria-hidden="true"></i><span data-en="Infrastructure, Networks & Support">Infraestrutura, Redes e Suporte</span></h3>
+                        <ul class="tag-list mono">
+                            <li class="tag-badge"><i class="fa-brands fa-linux" aria-hidden="true"></i>Linux</li>
+                            <li class="tag-badge"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Zabbix & Grafana</li>
+                            <li class="tag-badge"><i class="fa-solid fa-users-gear" aria-hidden="true"></i>Active Directory</li>
+                            <li class="tag-badge"><i class="fa-solid fa-wifi" aria-hidden="true"></i>Unifi & VPNs</li>
+                            <li class="tag-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Firewall & DDoS</li>
+                            <li class="tag-badge"><i class="fa-solid fa-headset" aria-hidden="true"></i>Suporte N1/N2 & GLPI</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="knowledge-card">
-                        <div class="knowledge-icon-wrapper"><i class="fa-solid fa-table-list"></i></div>
-                        <h4 class="knowledge-title" data-i18n="know_4_title">Soft Skills & Metodologias</h4>
-                        <ul class="knowledge-list">
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_4_item1">Trabalho em Equipe</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_4_item2">Proatividade</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_4_item3">Resolução de Problemas</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_4_item4">Pontualidade</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_4_item5">Iniciativa</span></li>
-                            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="know_4_item6">Ensino/Tutoria</span></li>
+                    </div></div>
+                    <div class="col-md-6"><div class="card-surface">
+                        <h3 class="h5 fw-bold mb-3"><i class="fa-solid fa-list-check me-2" style="color: var(--primary);" aria-hidden="true"></i><span data-en="Processes, Documentation & Agile">Processos, Documentação e Agilidade</span></h3>
+                        <ul class="tag-list mono">
+                            <li class="tag-badge"><i class="fa-solid fa-rotate" aria-hidden="true"></i>Scrum & Kanban</li>
+                            <li class="tag-badge"><i class="fa-solid fa-certificate" aria-hidden="true"></i>ITIL V3 Foundation</li>
+                            <li class="tag-badge"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span data-en="Requirements & Business Rules">Requisitos & Regras de Negócio</span></li>
+                            <li class="tag-badge"><i class="fa-solid fa-book" aria-hidden="true"></i><span data-en="Technical Documentation">Documentação Técnica</span></li>
+                            <li class="tag-badge"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i><span data-en="Teaching & Mentoring">Ensino & Coordenação</span></li>
                         </ul>
-                    </div>
+                    </div></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SEÇÃO NOVA: PROJETOS -->
-    <section id="projetos" class="section-alt">
-        <div class="container">
-            <h2 class="section-title" data-i18n="proj_title">Projetos em Destaque (EM DESENVOLVIMENTO)</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="project-card">
-                        <div class="project-img pj-1"></div>
-                        <div class="project-content">
-                            <h4 class="project-title" data-i18n="proj_1_title">Sistema de Atendimento (SUAP)</h4>
-                            <p class="project-desc" data-i18n="proj_1_desc">Módulo desenvolvido para tratar a evasão escolar no IFRN. Análise de requisitos e backend construído para o setor pedagógico.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>Django</span><span>PostgreSQL</span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- 6. RECOMENDAÇÕES DE COLEGAS -->
+        <section id="recomendacoes" class="section-alt" aria-labelledby="rec-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-index mono">05. // quem_trabalhou_comigo</span>
+                    <h2 id="rec-heading" class="section-title" data-en="What Colleagues Say">O que dizem colegas de equipe</h2>
                 </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="project-card">
-                        <div class="project-img pj-3"></div>
-                        <div class="project-content">
-                            <h4 class="project-title" data-i18n="proj_3_title">Rede de Proteção DDoS</h4>
-                            <p class="project-desc" data-i18n="proj_3_desc">Projeto RdP-DDoS, pesquisa focada na proteção contra ataques de negação de serviços no PoP-RN e Tribunal de Justiça do RN.</p>
-                            <div class="project-tags">
-                                <span data-i18n="proj_3_tag1">Redes</span><span data-i18n="proj_3_tag2">Segurança</span><span data-i18n="proj_3_tag3">Pesquisa</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col"><blockquote class="card-surface mb-0 d-flex flex-column justify-content-between">
+                        <p class="text-muted mb-4" data-en="&quot;An excellent professional and student who is always seeking to improve his skills. Easy to get along with, always ready to help, and with unmatched dedication. We had the opportunity to intern together and I know that wherever he goes, he will give his best.&quot;">"Um excelente profissional e estudante que está sempre em busca de se qualificar. Fácil de se relacionar, sempre pronto para ajudar e de dedicação sem igual. Tivemos a oportunidade de estagiar juntos e sei que, por onde estiver, estará dando o melhor de si e contribuindo de forma bastante positiva."</p>
+                        <footer class="d-flex align-items-center gap-3 bg-transparent border-0 p-0"><div class="avatar-initials mono" aria-hidden="true">AH</div><div><cite class="fw-bold fst-normal d-block">Anderson Holanda</cite><span class="small mono" style="color: var(--primary);">QA</span></div></footer>
+                    </blockquote></div>
+                    <div class="col"><blockquote class="card-surface mb-0 d-flex flex-column justify-content-between">
+                        <p class="text-muted mb-4" data-en="&quot;I worked with Jackson in the IT department during our internship at the Natal Health Department. He was proactive, committed, and whenever called upon, always available to help.&quot;">"Trabalhei com o Jackson na área de TI, durante nosso período de estágio na Secretaria de Saúde de Natal. Ele era uma pessoa proativa, empenhada e sempre quando solicitado estava disponível para ajudar."</p>
+                        <footer class="d-flex align-items-center gap-3 bg-transparent border-0 p-0"><div class="avatar-initials mono" aria-hidden="true">FS</div><div><cite class="fw-bold fst-normal d-block">Felipe Sergio</cite><span class="small mono" style="color: var(--primary);" data-en="Network Analyst">Analista de Redes</span></div></footer>
+                    </blockquote></div>
+                    <div class="col"><blockquote class="card-surface mb-0 d-flex flex-column justify-content-between">
+                        <p class="text-muted mb-4" data-en="&quot;I had the opportunity to work with Jackson and can say without a doubt that he is a great professional, responsible, and an incredible person. Very dedicated, with a great sense of urgency, impeccable interpersonal skills, patient, and super helpful.&quot;">"Tive a oportunidade de trabalhar com Jackson durante o estágio e posso dizer que ele sem dúvidas é um ótimo profissional, responsável e uma pessoa incrível. Muito dedicado a suas demandas, com ótimo senso de urgência, relacionamento interpessoal impecável, paciente e super solícito."</p>
+                        <footer class="d-flex align-items-center gap-3 bg-transparent border-0 p-0"><div class="avatar-initials mono" aria-hidden="true">RM</div><div><cite class="fw-bold fst-normal d-block">Raffael Morais</cite><span class="small mono" style="color: var(--primary);" data-en="Backend Developer">Dev Backend</span></div></footer>
+                    </blockquote></div>
+                    <div class="col"><blockquote class="card-surface mb-0 d-flex flex-column justify-content-between">
+                        <p class="text-muted mb-4" data-en="&quot;An excellent person, very dedicated, always willing to help, and a great partner. I worked on projects with him and without a doubt he is someone who is always seeking growth—not only his own, but also of everyone around him.&quot;">"Uma pessoa excelente, bastante dedicado, sempre disposto a ajudar e muito parceiro. Já tive oportunidades de trabalhar em projetos com ele e sem sombra de dúvidas uma ótima pessoa que está sempre buscando a evolução, e não somente a dele e sim a de quem está a seu redor."</p>
+                        <footer class="d-flex align-items-center gap-3 bg-transparent border-0 p-0"><div class="avatar-initials mono" aria-hidden="true">FB</div><div><cite class="fw-bold fst-normal d-block">Franlink Barbosa</cite><span class="small mono" style="color: var(--primary);">Tech Lead</span></div></footer>
+                    </blockquote></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- SEÇÃO 5: RECOMENDAÇÕES -->
-    <section id="recomendacoes">
+    <!-- 7. CONTATO E RODAPÉ -->
+    <footer id="contato" aria-labelledby="contato-heading">
         <div class="container">
-            <h2 class="section-title" data-i18n="rec_title">Recomendações</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="testimonial-card">
-                        <i class="fa-solid fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text" data-i18n="rec_1_text">"Um excelente profissional e estudante que está sempre em busca de se qualificar. Fácil de se relacionar, sempre pronto para ajudar e de dedicação sem igual. Tivemos a oportunidade de estagiar juntos e sei que, por onde estiver, estará dando o melhor de si e contribuindo de forma bastante positiva."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar av-1"></div>
-                            <div class="author-info"><h5>Anderson Holanda</h5><p>QA</p></div>
-                        </div>
-                    </div>
+            <div class="row gy-4 align-items-center justify-content-between">
+                <div class="col-lg-6">
+                    <span class="section-index mono">06. // contato</span>
+                    <h2 id="contato-heading" class="h3 fw-bold mb-2" data-en="Want to talk about a project or opportunity?">Quer conversar sobre um projeto ou oportunidade?</h2>
+                    <p class="text-muted mb-4" data-en="Send me a message via email, LinkedIn, or WhatsApp. I reply quickly.">Pode me chamar direto por e-mail, LinkedIn ou WhatsApp.</p>
+                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0 mono small">
+                        <li><i class="fa-solid fa-envelope me-2" style="color: var(--primary);" aria-hidden="true"></i><a href="mailto:jackson2016.ricardo@gmail.com" class="contact-link">jackson2016.ricardo@gmail.com</a></li>
+                        <li><i class="fa-brands fa-whatsapp me-2" style="color: var(--primary);" aria-hidden="true"></i><a href="tel:+5584988667338" class="contact-link">(84) 98866-7338</a></li>
+                        <li><i class="fa-solid fa-location-dot me-2" style="color: var(--primary);" aria-hidden="true"></i><span data-en="Natal - RN, Brazil">Natal - RN, Brasil</span></li>
+                    </ul>
                 </div>
-                <div class="col">
-                    <div class="testimonial-card">
-                        <i class="fa-solid fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text" data-i18n="rec_2_text">"Trabalhei com o Jackson na área de TI, durante nosso período de estágio na Secretária de Saúde de Natal. Ele era uma pessoa proativa, empenhada e sempre quando solicitado estava disponível para ajudar."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar av-2"></div>
-                            <div class="author-info"><h5>Felipe Sergio</h5><p data-i18n="rec_2_role">Analista de Redes</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="testimonial-card">
-                        <i class="fa-solid fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text" data-i18n="rec_3_text">"Tive a oportunidade de trabalhar com jackson durante o estágio e posso dizer que ele sem dúvidas é um ótimo profissional, responsável e uma pessoa incrível. Muito dedicado a suas demandas, com ótimo senso de urgência, relacionamento interpessoal impecável, paciente e super solicito, sempre disponível para ajudar e orientar caso tenha dúvida em algo."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar av-3"></div>
-                            <div class="author-info"><h5>Raffael Morais</h5><p data-i18n="rec_3_role">Dev Backend</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="testimonial-card">
-                        <i class="fa-solid fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text" data-i18n="rec_4_text">"Uma pessoa excelente, bastante dedicado, sempre disposto a ajudar e muito parceiro. Já tive oportunidades de trabalhar em projetos com ele e sem sombra de dúvidas uma ótima pessoa que está sempre buscando a evolução, e não somente a dele e sim a de quem está a seu redor."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar av-4"></div>
-                            <div class="author-info"><h5>Franlink Barbosa</h5><p>Tech Lead</p></div>
-                        </div>
+                <div class="col-lg-5 text-lg-end">
+                    <div class="d-flex gap-2 justify-content-lg-end flex-wrap">
+                        <a href="https://www.linkedin.com/in/jackson-r100/" target="_blank" rel="noopener noreferrer" class="btn-custom btn-outline-custom"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+                        <a href="https://github.com/JacksonRicardo/" target="_blank" rel="noopener noreferrer" class="btn-custom btn-outline-custom"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+                        <a href="mailto:jackson2016.ricardo@gmail.com" class="btn-custom btn-primary-custom"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i><span data-en="Send Email">Enviar E-mail</span></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 6: CONTATO E FOOTER -->
-    <footer id="contato">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contact_title">Entre em Contato</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h3 class="mb-4 brand-font" data-i18n="contact_subtitle">Vamos conversar?</h3>
-                    <p class="text-muted mb-5" data-i18n="contact_desc">Estou sempre aberto a novos desafios e oportunidades. Sinta-se à vontade para entrar em contato comigo através dos canais abaixo.</p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <h5 class="mb-1">Email</h5>
-                            <a href="mailto:jackson2016.ricardo@gmail.com" class="contact-link hover-cyan">jackson2016.ricardo@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <h5 class="mb-1" data-i18n="contact_phone">Telefone / WhatsApp</h5>
-                            <a href="tel:+5584988667338" class="contact-link hover-cyan">(84) 98866-7338</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h5 class="mb-1" data-i18n="contact_loc_label">Localização</h5>
-                            <p class="text-muted mb-0" data-i18n="contact_loc_val">Natal - RN, Brasil</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-end">
-                    <h4 class="mb-3" data-i18n="contact_social">Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jackson-r100/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://github.com/JacksonRicardo/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:jackson2016.ricardo@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p data-i18n-html="footer_copy">&copy; 2026 Jackson Ricardo. Todos os direitos reservados.</p>
+            <div class="border-top mt-5 pt-4 text-center text-muted small mono" style="border-color: var(--border-color) !important;">
+                <p class="mb-0" data-en="&copy; 2026 Jackson Ricardo. Built with semantic HTML, accessible contrast, and clean code.">&copy; 2026 Jackson Ricardo. Código semântico, acessível e direto ao ponto.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
+    <!-- ACESSIBILIDADE UNIVERSAL -->
+    <div id="readingGuide" class="reading-guide" aria-hidden="true"></div>
+    <button id="a11yToggle" class="a11y-fab" type="button" aria-label="Abrir painel de acessibilidade (Tamanho da letra, Alto Contraste, Leitura em Voz Alta)" aria-expanded="false" aria-controls="a11yPanel" title="Acessibilidade">
+        <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+    </button>
+    <aside id="a11yPanel" class="a11y-panel" aria-label="Painel de Acessibilidade">
+        <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom" style="border-color: var(--border-color) !important;">
+            <strong class="small mono" style="color: var(--primary);"><i class="fa-solid fa-universal-access me-1" aria-hidden="true"></i><span data-en="Accessibility Menu">Menu de Acessibilidade</span></strong>
+            <button id="a11yClose" type="button" class="control-btn px-2 py-0" style="height: 28px;" aria-label="Fechar painel de acessibilidade">&times;</button>
+        </div>
+        <button id="a11ySpeak" type="button" class="a11y-btn" aria-pressed="false"><span><i class="fa-solid fa-volume-high me-2" aria-hidden="true"></i><span id="speakLabel" data-en="Listen to page in audio">Ouvir página em áudio</span></span></button>
+        <div class="d-flex gap-2 mb-2" role="group" aria-label="Ajustar tamanho da letra">
+            <button id="fontDecrease" type="button" class="a11y-btn justify-content-center mb-0" aria-label="Diminuir letra">A-</button>
+            <button id="fontReset" type="button" class="a11y-btn justify-content-center mb-0 mono" aria-label="Tamanho original da letra">100%</button>
+            <button id="fontIncrease" type="button" class="a11y-btn justify-content-center mb-0" aria-label="Aumentar letra">A+</button>
+        </div>
+        <button id="a11yContrast" type="button" class="a11y-btn" aria-pressed="false"><span><i class="fa-solid fa-circle-half-stroke me-2" aria-hidden="true"></i><span data-en="Max High Contrast">Alto Contraste (Preto/Amarelo)</span></span></button>
+        <button id="a11yDyslexia" type="button" class="a11y-btn" aria-pressed="false"><span><i class="fa-solid fa-glasses me-2" aria-hidden="true"></i><span data-en="Easy Reading (Dyslexia)">Espaçamento p/ Dislexia</span></span></button>
+        <button id="a11yGuide" type="button" class="a11y-btn" aria-pressed="false"><span><i class="fa-solid fa-grip-lines me-2" aria-hidden="true"></i><span data-en="Reading Line Guide">Régua Guia de Leitura</span></span></button>
+        <button id="a11yLinks" type="button" class="a11y-btn mb-0" aria-pressed="false"><span><i class="fa-solid fa-link me-2" aria-hidden="true"></i><span data-en="Highlight all links">Sublinhar todos os links</span></span></button>
+    </aside>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Script para Tema Claro/Escuro, Tradução (PT/EN) e Navbar -->
     <script>
-        (function() {
-            const htmlEl = document.documentElement;
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = document.getElementById('themeIcon');
-            const langToggle = document.getElementById('langToggle');
-            const langLabel = document.getElementById('langLabel');
+        const html = document.documentElement;
+        const themeBtn = document.getElementById('themeToggle'), themeIcon = document.getElementById('themeIcon'), themeLabel = document.getElementById('themeLabel');
+        const langBtn = document.getElementById('langToggle'), langLabel = document.getElementById('langLabel');
+        const paletteBtn = document.getElementById('paletteToggle'), paletteLabel = document.getElementById('paletteLabel');
+        const palettes = [{ id: 'emerald', label: 'Terminal' }, { id: 'editor', label: 'Editor' }, { id: 'amber', label: 'Amber' }];
 
-            const translations = {
-                pt: {
-                    nav_home: 'Início',
-                    nav_about: 'Sobre Mim',
-                    nav_exp: 'Experiência',
-                    nav_skills: 'Habilidades',
-                    nav_knowledge: 'Conhecimentos',
-                    nav_projects: 'Projetos',
-                    nav_testimonials: 'Recomendações',
-                    nav_contact: 'Contato',
-                    hero_greeting: 'Olá, eu sou',
-                    hero_subtitle: 'Analista de Sistemas | ERP, SQL e Integrações',
-                    hero_desc: 'Transformando problemas complexos em soluções eficientes através de sistemas ERP, desenvolvimento de software, dados e integrações.',
-                    hero_btn_exp: 'Ver Experiências',
-                    hero_btn_cv: 'Baixar Currículo',
-                    about_title: 'Sobre Mim',
-                    about_subtitle: 'Minha Trajetória Profissional',
-                    about_p1: 'Analista de Sistemas graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> e pós-graduado em <strong>Ciência de Dados</strong>, com mais de 5 anos de experiência em TI.',
-                    about_p2: 'Atuação sólida em implantação de sistemas <strong>ERP (SUAP)</strong>, levantamento e análise de requisitos, desenvolvimento e manutenção de sistemas (<strong>Python, JavaScript, Django, React, PostgreSQL e SQL</strong>), integração entre sistemas, elaboração de documentação técnica e funcional e suporte a usuários.',
-                    about_p3: 'Possuo formação técnica em <strong>Redes de Computadores</strong> e experiência com o sistema <strong>TOTVS</strong>, além de vivência em gerenciamento de atividades com <strong>Scrum e Kanban</strong> e certificação <strong>ITIL V3 Foundation</strong>.',
-                    edu_heading: 'Formação Acadêmica',
-                    edu_1_title: 'Análise e Desenvolvimento de Sistemas',
-                    edu_1_inst: 'IFRN - Instituto Federal do Rio Grande do Norte (2018 – 2024)',
-                    edu_2_title: 'Técnico em Redes de Computadores',
-                    edu_2_inst: 'IMD - Instituto Metrópole Digital (2016 – 2018)',
-                    postgrad_heading: 'Pós-graduações',
-                    postgrad_1: 'Especialização em Ciência de Dados (concluída em 2025)',
-                    postgrad_2: 'Especialização em Tecnologia, Agilidade e Inovação — Gran Centro Universitário (cursando)',
-                    exp_title: 'Experiência Profissional',
-                    exp_senac_date: '2023 – 2024 · 1 ano e Fev 2026 – atual · 9 meses',
-                    exp_senac_role: 'Desenvolvedor Web e Assistente de Suporte de TI',
-                    exp_senac_desc1: '<strong>Assistente de Suporte de TI (Fev 2026 – atual):</strong> Automação de rotinas com Python, desenvolvimento de sistemas básicos e dashboards em Power BI com ETL. Documentação de fluxos de dados e regras de negócio, gestão de chamados via GLPI (SLA) e coordenação de estagiários.',
-                    exp_senac_desc2: '<strong>Desenvolvedor Web (2023 – 2024):</strong> Implantação de sistema e desenvolvimento front-end e back-end em Software House, com Python, JavaScript, Django, React e PostgreSQL. Implementação de funcionalidades, correção de bugs e integração de sistemas, em trabalho em equipe.',
-                    exp_pgfn_date: 'Fev 2026 – Out 2026',
-                    exp_pgfn_role: 'Analista de Dados',
-                    exp_pgfn_comp: 'Procuradoria-Geral da Fazenda Nacional (PGFN/CE) • Remoto',
-                    exp_pgfn_desc: 'Extração, tratamento e validação de dados operacionais e jurídicos a partir de múltiplas fontes, garantindo qualidade e consistência das bases para análise. Construção de dashboards analíticos e relatórios em Power BI para monitoramento de KPIs institucionais. Desenvolvimento de pipelines ETL e modelagem de dados no contexto do Projeto Argos (Protocolo 0), integrando fontes heterogêneas e automatizando rotinas de análise. Atuação no LABTI documentando processos, regras de negócio e definições de dados, em ambiente ágil com Scrum e Kanban.',
-                    exp_salta_date: '2025 · 8 meses',
-                    exp_salta_role: 'Assistente de TI',
-                    exp_salta_desc: 'Suporte técnico N1 e N2, atuando na análise e resolução de incidentes, instalação e manutenção de softwares, configuração de redes, criação de VPNs e Access Points Unifi, gerenciamento de contas e permissões no Active Directory e suporte ao sistema TOTVS. Responsável pelo atendimento técnico, registro e acompanhamento de chamados, documentação de soluções e suporte aos usuários. Monitoramento de infraestrutura utilizando Zabbix e Grafana, assegurando disponibilidade e desempenho dos serviços.',
-                    exp_sr_date: 'Jun 2024 – Dez 2024 · 6 meses',
-                    exp_sr_role: 'Desenvolvedor Full Stack',
-                    exp_sr_comp: 'Service Rapide (presencial)',
-                    exp_sr_desc: 'Desenvolvimento com Python, Django e PostgreSQL de módulos de visualização e análise de imagens médicas (DICOM). Integração de chatbot com inteligência artificial (Gemini) ao sistema e implementação de interfaces em JavaScript a partir de protótipos no Figma, em ciclos Scrum com múltiplas áreas, documentando requisitos e entregas.',
-                    exp_funcern_date: 'Jan 2022 – Jun 2024 · 2 anos e 6 meses',
-                    exp_funcern_role: 'Desenvolvedor Web',
-                    exp_funcern_comp: 'FUNCERN (projetos UFR e IFMT)',
-                    exp_funcern_desc: 'Implantação do SUAP (sistema de gestão/ERP acadêmico) em duas instituições federais, com desenvolvimento back-end em Python, Django e PostgreSQL. Migração de dados, criação e revisão de scripts SQL, testes de integridade e implantação. Elaboração da documentação técnica do sistema e das regras de negócio, além de suporte técnico às equipes da UFR e do IFMT na manipulação do código do SUAP e de aplicativos vinculados.',
-                    exp_imd_date: '2023 · 3 meses',
-                    exp_imd_role: 'Professor Mediador',
-                    exp_imd_desc: 'Atuei como Professor Mediador de Introdução à Programação com Python, onde ministro aulas abrangentes sobre programação, incluindo conceitos de condicionais, loops, listas, funções, strings, dicionários e controle de versão com Git.',
-                    exp_pesq_date: '2023 · 6 meses',
-                    exp_pesq_role: 'Projeto de Pesquisa',
-                    exp_pesq_desc: 'Desenvolvimento de soluções tecnológicas para tratar a evasão escolar no Campus Natal-Central. O projeto explora a análise de requisitos e o desenvolvimento de um módulo de atendimento para o setor pedagógico do IFRN através do sistema SUAP.',
-                    exp_mprn_role: 'Assistente de TI',
-                    exp_mprn_desc: 'Assistência técnica prestada aos servidores do MPRN, realizando atendimentos ao usuário para sanar problemas técnicos relacionados a equipamentos/serviços de informática. Entre as atividades estão instalação de softwares e drivers, atualização de softwares e manutenção de equipamentos, como também configuração de software de firewall. Além disso, desempenhava funções relacionadas ao desenvolvimento de sistemas, incluindo a atualização de tecnologias já existentes e a proposição de novas rotinas para otimização dos processos.',
-                    exp_tutor_role: 'Tutor de Matemática',
-                    exp_tutor_desc: 'Distribuir exercícios e auxiliar na resolução das questões. Conteúdos: Teoria dos Conjuntos, Funções, Análise Combinatória, Lógica Proposicional.',
-                    exp_ddos_role: 'Pesquisa de Extensão',
-                    exp_ddos_desc: 'Projeto de Extensão Contínuo: RdP-DDoS - Rede de proteção contra ataques de negação de serviços. Este projeto foi desenvolvido utilizando a aplicação de ferramentas e técnicas de combate ao DDoS nas redes corporativas do PoP-RN e do TJRN, durante três meses em cada instituição, sendo assim, foram realizados desenvolvimentos de mecanismos que possam detectar e mitigar os impactos do tráfego malicioso gerado por ataques DDoS.',
-                    exp_sms_role: 'Técnico de Informática',
-                    exp_sms_comp: 'Secretaria Municipal de Saúde de Natal',
-                    exp_sms_desc: 'Assistência técnica prestada aos servidores, realizando atendimentos ao usuário para sanar problemas técnicos relacionados a equipamentos/serviços de informática. Entre as atividades estão instalação de softwares e drivers, atualização de softwares e manutenção de equipamentos, como também configuração de software de firewall. Além disso, desempenhava funções relacionadas ao desenvolvimento de sistemas, incluindo a atualização de tecnologias já existentes e a proposição de novas rotinas para otimização dos processos.',
-                    skills_title: 'Minhas Habilidades',
-                    skill_net: 'Redes (CCNA)',
-                    skill_support: 'Suporte TI',
-                    skill_agile: 'Metodologias Ágeis',
-                    know_title: 'Áreas de Conhecimento',
-                    know_1_title: 'Desenvolvimento & Software',
-                    know_1_item8: 'Desenv. Front/Back-end',
-                    know_2_title: 'Infraestrutura & Redes',
-                    know_2_item6: 'Mitigação DDoS',
-                    know_2_item8: 'Redes Corporativas',
-                    know_3_title: 'Suporte Técnico & Sistemas',
-                    know_3_item1: 'Suporte N1 e N2',
-                    know_3_item2: 'Atendimento ao Usuário',
-                    know_3_item4: 'Manutenção de Hardware',
-                    know_3_item5: 'Instalação de Softwares',
-                    know_3_item6: 'Sistema ERP TOTVS',
-                    know_4_title: 'Soft Skills & Metodologias',
-                    know_4_item1: 'Trabalho em Equipe',
-                    know_4_item2: 'Proatividade',
-                    know_4_item3: 'Resolução de Problemas',
-                    know_4_item4: 'Pontualidade',
-                    know_4_item5: 'Iniciativa',
-                    know_4_item6: 'Ensino/Tutoria',
-                    proj_title: 'Projetos em Destaque (EM DESENVOLVIMENTO)',
-                    proj_1_title: 'Sistema de Atendimento (SUAP)',
-                    proj_1_desc: 'Módulo desenvolvido para tratar a evasão escolar no IFRN. Análise de requisitos e backend construído para o setor pedagógico.',
-                    proj_3_title: 'Rede de Proteção DDoS',
-                    proj_3_desc: 'Projeto RdP-DDoS, pesquisa focada na proteção contra ataques de negação de serviços no PoP-RN e Tribunal de Justiça do RN.',
-                    proj_3_tag1: 'Redes',
-                    proj_3_tag2: 'Segurança',
-                    proj_3_tag3: 'Pesquisa',
-                    rec_title: 'Recomendações',
-                    rec_1_text: '"Um excelente profissional e estudante que está sempre em busca de se qualificar. Fácil de se relacionar, sempre pronto para ajudar e de dedicação sem igual. Tivemos a oportunidade de estagiar juntos e sei que, por onde estiver, estará dando o melhor de si e contribuindo de forma bastante positiva."',
-                    rec_2_text: '"Trabalhei com o Jackson na área de TI, durante nosso período de estágio na Secretária de Saúde de Natal. Ele era uma pessoa proativa, empenhada e sempre quando solicitado estava disponível para ajudar."',
-                    rec_2_role: 'Analista de Redes',
-                    rec_3_text: '"Tive a oportunidade de trabalhar com jackson durante o estágio e posso dizer que ele sem dúvidas é um ótimo profissional, responsável e uma pessoa incrível. Muito dedicado a suas demandas, com ótimo senso de urgência, relacionamento interpessoal impecável, paciente e super solicito, sempre disponível para ajudar e orientar caso tenha dúvida em algo."',
-                    rec_3_role: 'Dev Backend',
-                    rec_4_text: '"Uma pessoa excelente, bastante dedicado, sempre disposto a ajudar e muito parceiro. Já tive oportunidades de trabalhar em projetos com ele e sem sombra de dúvidas uma ótima pessoa que está sempre buscando a evolução, e não somente a dele e sim a de quem está a seu redor."',
-                    contact_title: 'Entre em Contato',
-                    contact_subtitle: 'Vamos conversar?',
-                    contact_desc: 'Estou sempre aberto a novos desafios e oportunidades. Sinta-se à vontade para entrar em contato comigo através dos canais abaixo.',
-                    contact_phone: 'Telefone / WhatsApp',
-                    contact_loc_label: 'Localização',
-                    contact_loc_val: 'Natal - RN, Brasil',
-                    contact_social: 'Redes Sociais',
-                    footer_copy: '&copy; 2026 Jackson Ricardo. Todos os direitos reservados.'
-                },
-                en: {
-                    nav_home: 'Home',
-                    nav_about: 'About Me',
-                    nav_exp: 'Experience',
-                    nav_skills: 'Skills',
-                    nav_knowledge: 'Expertise',
-                    nav_projects: 'Projects',
-                    nav_testimonials: 'Recommendations',
-                    nav_contact: 'Contact',
-                    hero_greeting: 'Hello, I am',
-                    hero_subtitle: 'Systems Analyst | ERP, SQL & Integrations',
-                    hero_desc: 'Turning complex problems into efficient solutions through ERP systems, software development, data, and integrations.',
-                    hero_btn_exp: 'View Experience',
-                    hero_btn_cv: 'Download Resume',
-                    about_title: 'About Me',
-                    about_subtitle: 'My Professional Journey',
-                    about_p1: 'Systems Analyst with a degree in <strong>Systems Analysis and Development</strong> and a postgraduate specialization in <strong>Data Science</strong>, with over 5 years of experience in IT.',
-                    about_p2: 'Strong track record in <strong>ERP system deployment (SUAP)</strong>, requirements gathering and analysis, software development and maintenance (<strong>Python, JavaScript, Django, React, PostgreSQL, and SQL</strong>), system integration, technical and functional documentation, and user support.',
-                    about_p3: 'I hold a technical degree in <strong>Computer Networks</strong> and hands-on experience with the <strong>TOTVS</strong> ERP system, as well as project and task management experience using <strong>Scrum and Kanban</strong> and an <strong>ITIL V3 Foundation</strong> certification.',
-                    edu_heading: 'Academic Background',
-                    edu_1_title: 'Systems Analysis and Development (B.S.)',
-                    edu_1_inst: 'IFRN - Federal Institute of Rio Grande do Norte (2018 – 2024)',
-                    edu_2_title: 'Computer Networks Technician',
-                    edu_2_inst: 'IMD - Digital Metropolis Institute (2016 – 2018)',
-                    postgrad_heading: 'Postgraduate Studies',
-                    postgrad_1: 'Postgraduate Specialization in Data Science (Completed in 2025)',
-                    postgrad_2: 'Postgraduate Specialization in Technology, Agility, and Innovation — Gran Centro Universitário (In progress)',
-                    exp_title: 'Professional Experience',
-                    exp_senac_date: '2023 – 2024 · 1 yr & Feb 2026 – Present · 9 mos',
-                    exp_senac_role: 'Web Developer & IT Support Assistant',
-                    exp_senac_desc1: '<strong>IT Support Assistant (Feb 2026 – Present):</strong> Task automation with Python, development of core systems, and Power BI dashboards with ETL. Documentation of data flows and business rules, ticket management via GLPI (SLA), and intern coordination.',
-                    exp_senac_desc2: '<strong>Web Developer (2023 – 2024):</strong> System deployment and front-end/back-end development in a Software House using Python, JavaScript, Django, React, and PostgreSQL. Feature implementation, bug fixing, and system integration in a collaborative team environment.',
-                    exp_pgfn_date: 'Feb 2026 – Oct 2026',
-                    exp_pgfn_role: 'Data Analyst',
-                    exp_pgfn_comp: 'Office of the Attorney General for the National Treasury (PGFN/CE) • Remote',
-                    exp_pgfn_desc: 'Extraction, transformation, and validation of operational and legal data from multiple sources, ensuring data quality and consistency for analysis. Built analytical dashboards and reports in Power BI to monitor institutional KPIs. Developed ETL pipelines and data models within Project Argos (Protocolo 0), integrating heterogeneous sources and automating analytical routines. Worked at LABTI documenting processes, business rules, and data definitions in an Agile environment using Scrum and Kanban.',
-                    exp_salta_date: '2025 · 8 mos',
-                    exp_salta_role: 'IT Assistant',
-                    exp_salta_desc: 'Tier 1 and Tier 2 technical support, acting on incident analysis and resolution, software installation and maintenance, network configuration, VPN and Unifi Access Point setup, Active Directory account and permission management, and TOTVS ERP support. Responsible for technical assistance, ticket tracking, solution documentation, and infrastructure monitoring using Zabbix and Grafana.',
-                    exp_sr_date: 'Jun 2024 – Dec 2024 · 6 mos',
-                    exp_sr_role: 'Full Stack Developer',
-                    exp_sr_comp: 'Service Rapide (On-site)',
-                    exp_sr_desc: 'Developed medical image (DICOM) visualization and analysis modules using Python, Django, and PostgreSQL. Integrated an AI-powered chatbot (Gemini) into the system and implemented JavaScript interfaces from Figma prototypes within cross-functional Scrum sprints, documenting requirements and deliverables.',
-                    exp_funcern_date: 'Jan 2022 – Jun 2024 · 2 yrs 6 mos',
-                    exp_funcern_role: 'Web Developer',
-                    exp_funcern_comp: 'FUNCERN (UFR & IFMT Projects)',
-                    exp_funcern_desc: 'Deployed SUAP (academic ERP/management system) across two federal institutions, with back-end development in Python, Django, and PostgreSQL. Performed data migration, creation and review of SQL scripts, integrity testing, and deployment. Authored technical and business rules documentation, and provided technical support to UFR and IFMT teams.',
-                    exp_imd_date: '2023 · 3 mos',
-                    exp_imd_role: 'Mediator Instructor',
-                    exp_imd_desc: 'Served as Mediator Instructor for Introduction to Programming with Python, teaching comprehensive programming concepts including conditionals, loops, lists, functions, strings, dictionaries, and version control with Git.',
-                    exp_pesq_date: '2023 · 6 mos',
-                    exp_pesq_role: 'Research Project',
-                    exp_pesq_desc: 'Developed technological solutions to address student dropout at the Natal-Central Campus. The project explored requirements analysis and built a student support module for IFRN\'s pedagogical department within the SUAP system.',
-                    exp_mprn_role: 'IT Assistant',
-                    exp_mprn_desc: 'Provided technical assistance to MPRN staff, resolving hardware and software issues. Activities included software and driver installation, system updates, hardware maintenance, and firewall configuration, as well as updating legacy systems and proposing new routines for process optimization.',
-                    exp_tutor_role: 'Mathematics Tutor',
-                    exp_tutor_desc: 'Distributed exercises and assisted students in problem-solving. Topics covered: Set Theory, Functions, Combinatorics, and Propositional Logic.',
-                    exp_ddos_role: 'Extension Research',
-                    exp_ddos_desc: 'Continuous Extension Project: RdP-DDoS - Protection network against Denial-of-Service attacks. Applied DDoS mitigation tools and techniques across the corporate networks of PoP-RN and TJRN, developing mechanisms to detect and mitigate malicious DDoS traffic.',
-                    exp_sms_role: 'IT Technician',
-                    exp_sms_comp: 'Municipal Health Department of Natal',
-                    exp_sms_desc: 'Provided technical support to public staff, troubleshooting hardware and software issues, installing software and drivers, maintaining equipment, configuring firewall software, and optimizing internal IT processes.',
-                    skills_title: 'My Skills',
-                    skill_net: 'Networking (CCNA)',
-                    skill_support: 'IT Support',
-                    skill_agile: 'Agile Methodologies',
-                    know_title: 'Areas of Expertise',
-                    know_1_title: 'Software Development',
-                    know_1_item8: 'Front/Back-end Dev',
-                    know_2_title: 'Infrastructure & Networks',
-                    know_2_item6: 'DDoS Mitigation',
-                    know_2_item8: 'Corporate Networks',
-                    know_3_title: 'Technical Support & Systems',
-                    know_3_item1: 'Tier 1 & Tier 2 Support',
-                    know_3_item2: 'User Assistance',
-                    know_3_item4: 'Hardware Maintenance',
-                    know_3_item5: 'Software Installation',
-                    know_3_item6: 'TOTVS ERP System',
-                    know_4_title: 'Soft Skills & Methodologies',
-                    know_4_item1: 'Teamwork',
-                    know_4_item2: 'Proactivity',
-                    know_4_item3: 'Problem Solving',
-                    know_4_item4: 'Punctuality',
-                    know_4_item5: 'Initiative',
-                    know_4_item6: 'Teaching / Tutoring',
-                    proj_title: 'Featured Projects (IN DEVELOPMENT)',
-                    proj_1_title: 'Student Support System (SUAP)',
-                    proj_1_desc: 'Module developed to address student dropout at IFRN. Requirements analysis and back-end built for the pedagogical department.',
-                    proj_3_title: 'DDoS Protection Network',
-                    proj_3_desc: 'RdP-DDoS project, research focused on mitigating Denial-of-Service attacks at PoP-RN and the Court of Justice of RN.',
-                    proj_3_tag1: 'Networking',
-                    proj_3_tag2: 'Security',
-                    proj_3_tag3: 'Research',
-                    rec_title: 'Recommendations',
-                    rec_1_text: '"An excellent professional and student who is always seeking to improve his skills. Easy to get along with, always ready to help, and with unmatched dedication. We had the opportunity to intern together and I know that wherever he goes, he will give his best and contribute very positively."',
-                    rec_2_text: '"I worked with Jackson in the IT department during our internship at the Natal Health Department. He was proactive, committed, and whenever called upon, always available to help."',
-                    rec_2_role: 'Network Analyst',
-                    rec_3_text: '"I had the opportunity to work with Jackson during our internship and can say without a doubt that he is a great professional, responsible, and an incredible person. Very dedicated to his tasks, with a great sense of urgency, impeccable interpersonal skills, patient, and super helpful."',
-                    rec_3_role: 'Backend Developer',
-                    rec_4_text: '"An excellent person, very dedicated, always willing to help, and a great partner. I have had opportunities to work on projects with him and without a shadow of a doubt he is someone who is always seeking growth—not only his own, but also of everyone around him."',
-                    contact_title: 'Get in Touch',
-                    contact_subtitle: 'Let\'s talk?',
-                    contact_desc: 'I am always open to new challenges and opportunities. Feel free to reach out to me through the channels below.',
-                    contact_phone: 'Phone / WhatsApp',
-                    contact_loc_label: 'Location',
-                    contact_loc_val: 'Natal - RN, Brazil',
-                    contact_social: 'Social Media',
-                    footer_copy: '&copy; 2026 Jackson Ricardo. All rights reserved.'
-                }
-            };
+        const i18nElements = document.querySelectorAll('[data-en]');
+        i18nElements.forEach(el => { el.dataset.pt = el.innerHTML; });
 
-            function applyLanguage(lang) {
-                const dict = translations[lang] || translations.pt;
-                htmlEl.setAttribute('lang', lang === 'en' ? 'en' : 'pt-BR');
-                document.title = lang === 'en' ? 'Jackson Ricardo | Portfolio' : 'Jackson Ricardo | Portfólio';
+        function setPalette(id) {
+            const found = palettes.find(p => p.id === id) || palettes[0];
+            html.setAttribute('data-palette', found.id);
+            paletteLabel.textContent = found.label;
+            localStorage.setItem('portfolio-palette', found.id);
+        }
+        function setTheme(theme) {
+            const isLight = theme === 'light';
+            isLight ? html.setAttribute('data-theme', 'light') : html.removeAttribute('data-theme');
+            themeIcon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+            themeLabel.dataset.pt = isLight ? 'Escuro' : 'Claro';
+            themeLabel.dataset.en = isLight ? 'Dark' : 'Light';
+            themeLabel.textContent = html.lang === 'en' ? themeLabel.dataset.en : themeLabel.dataset.pt;
+            localStorage.setItem('portfolio-theme', theme);
+        }
+        function setLanguage(lang) {
+            const isEn = lang === 'en';
+            html.lang = isEn ? 'en' : 'pt-BR';
+            document.title = isEn ? 'Jackson Ricardo | Systems & Data Analyst' : 'Jackson Ricardo | Analista de Sistemas e Dados';
+            i18nElements.forEach(el => { el.innerHTML = isEn ? el.dataset.en : el.dataset.pt; });
+            langLabel.textContent = isEn ? 'PT' : 'EN';
+            localStorage.setItem('portfolio-lang', lang);
+        }
 
-                document.querySelectorAll('[data-i18n]').forEach(function(el) {
-                    const key = el.getAttribute('data-i18n');
-                    if (dict[key] !== undefined) {
-                        el.textContent = dict[key];
-                    }
-                });
+        setPalette(localStorage.getItem('portfolio-palette') || 'emerald');
+        setTheme(localStorage.getItem('portfolio-theme') || 'dark');
+        setLanguage(localStorage.getItem('portfolio-lang') || 'pt');
 
-                document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
-                    const key = el.getAttribute('data-i18n-html');
-                    if (dict[key] !== undefined) {
-                        el.innerHTML = dict[key];
-                    }
-                });
+        paletteBtn.addEventListener('click', () => {
+            const idx = (palettes.findIndex(p => p.id === (html.getAttribute('data-palette') || 'emerald')) + 1) % palettes.length;
+            setPalette(palettes[idx].id);
+        });
+        themeBtn.addEventListener('click', () => setTheme(html.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
+        langBtn.addEventListener('click', () => setLanguage(html.lang === 'en' ? 'pt' : 'en'));
 
-                if (lang === 'en') {
-                    langLabel.textContent = 'PT';
-                    langToggle.setAttribute('title', 'Mudar para Português');
-                } else {
-                    langLabel.textContent = 'EN';
-                    langToggle.setAttribute('title', 'Switch to English');
-                }
+        // Acessibilidade
+        const a11yToggle = document.getElementById('a11yToggle'), a11yPanel = document.getElementById('a11yPanel');
+        const fontReset = document.getElementById('fontReset'), readingGuide = document.getElementById('readingGuide');
+        const a11ySpeak = document.getElementById('a11ySpeak'), speakLabel = document.getElementById('speakLabel');
+        let fontScale = 100;
+
+        a11yToggle.addEventListener('click', () => a11yToggle.setAttribute('aria-expanded', a11yPanel.classList.toggle('open')));
+        document.getElementById('a11yClose').addEventListener('click', () => { a11yPanel.classList.remove('open'); a11yToggle.setAttribute('aria-expanded', 'false'); });
+
+        function updateFont(s) {
+            fontScale = Math.min(135, Math.max(90, s));
+            html.style.fontSize = fontScale + '%';
+            fontReset.textContent = fontScale + '%';
+        }
+        document.getElementById('fontIncrease').addEventListener('click', () => updateFont(fontScale + 10));
+        document.getElementById('fontDecrease').addEventListener('click', () => updateFont(fontScale - 10));
+        fontReset.addEventListener('click', () => updateFont(100));
+
+        [['a11yContrast', 'data-contrast', 'high'], ['a11yDyslexia', 'data-dyslexia', 'true'], ['a11yGuide', 'data-guide', 'true'], ['a11yLinks', 'data-links', 'underline']].forEach(([id, attr, val]) => {
+            const btn = document.getElementById(id);
+            btn.addEventListener('click', () => {
+                const active = html.getAttribute(attr) === val;
+                active ? html.removeAttribute(attr) : html.setAttribute(attr, val);
+                btn.setAttribute('aria-pressed', !active);
+            });
+        });
+
+        window.addEventListener('mousemove', e => { if (html.getAttribute('data-guide') === 'true') readingGuide.style.top = e.clientY + 'px'; });
+
+        a11ySpeak.addEventListener('click', () => {
+            if (!('speechSynthesis' in window)) return;
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+                a11ySpeak.setAttribute('aria-pressed', 'false');
+                speakLabel.textContent = html.lang === 'en' ? 'Listen to page in audio' : 'Ouvir página em áudio';
+                return;
             }
-
-            function applyTheme(theme) {
-                if (theme === 'light') {
-                    htmlEl.setAttribute('data-theme', 'light');
-                    themeIcon.classList.remove('fa-sun');
-                    themeIcon.classList.add('fa-moon');
-                    themeToggle.setAttribute('title', 'Mudar para tema escuro');
-                } else {
-                    htmlEl.removeAttribute('data-theme');
-                    themeIcon.classList.remove('fa-moon');
-                    themeIcon.classList.add('fa-sun');
-                    themeToggle.setAttribute('title', 'Mudar para tema claro');
-                }
-            }
-
-            // Carrega preferências salvas
-            const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-            applyTheme(savedTheme);
-
-            const savedLang = localStorage.getItem('portfolio-lang') || 'pt';
-            applyLanguage(savedLang);
-
-            themeToggle.addEventListener('click', function() {
-                const currentTheme = htmlEl.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-                const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-                applyTheme(nextTheme);
-                localStorage.setItem('portfolio-theme', nextTheme);
-            });
-
-            langToggle.addEventListener('click', function() {
-                const currentLang = localStorage.getItem('portfolio-lang') || 'pt';
-                const nextLang = currentLang === 'pt' ? 'en' : 'pt';
-                applyLanguage(nextLang);
-                localStorage.setItem('portfolio-lang', nextLang);
-            });
-
-            // Sombra na Navbar ao rolar
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    navbar.style.boxShadow = 'var(--navbar-shadow)';
-                } else {
-                    navbar.style.boxShadow = 'none';
-                }
-            });
-        })();
+            const text = [document.getElementById('hero-heading').innerText, document.querySelector('.hero-subtitle').innerText, document.querySelector('#home p.text-muted').innerText, document.querySelector('#sobre .card-surface').innerText].join('. ');
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = html.lang === 'en' ? 'en-US' : 'pt-BR';
+            u.onend = () => { a11ySpeak.setAttribute('aria-pressed', 'false'); speakLabel.textContent = html.lang === 'en' ? 'Listen to page in audio' : 'Ouvir página em áudio'; };
+            a11ySpeak.setAttribute('aria-pressed', 'true');
+            speakLabel.textContent = html.lang === 'en' ? 'Stop audio' : 'Parar leitura';
+            window.speechSynthesis.speak(u);
+        });
     </script>
 </body>
 </html>
